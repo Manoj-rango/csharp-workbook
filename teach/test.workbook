@@ -1,0 +1,118 @@
+---
+uti: com.xamarin.workbook
+id: 0e175733-b403-461f-afbc-c7b06701e3b3
+title: test
+platforms:
+- Console
+---
+
+```csharp
+// conditional statements always takes a any booleans as input
+// different type of boolean inputs
+//1. true or false
+//2. assignment operators ==, !=, >=, &&, ||
+//3. boolean return functions
+
+bool IsOddNumber(int param1)
+{
+    if((param1 % 2) == 1)
+    {
+        return true; // function exits
+    }
+    return false; //function exits
+}
+
+void IsOddNumberTwo(int param1)
+{
+     if((param1 % 2) == 1)
+    {
+        Console.WriteLine("yes");
+    }
+    else
+    {
+        Console.WriteLine("no");
+    }
+}
+
+if(true)
+{
+    Console.WriteLine("if passed");
+}
+else
+{
+    Console.WriteLine("else passed");
+}
+
+IsOddNumberTwo(5);
+```
+
+```csharp
+//exit commands
+//1. return - exits code and also can carry values
+//2. break - exits code 
+
+//Function that Returns values
+int GetMyFile(int fileNo)
+{
+    for(int i =1; i<=25; i++)
+    {
+        //Console.WriteLine(i);
+        if(i == fileNo)
+        {
+            return fileNo;
+        }
+    }
+
+    return 0;
+}
+
+//Function doesn't return value
+void GetMyFileTwo(int fileNo)
+{
+    for(int i =1; i<=25; i++)
+    {
+        //Console.WriteLine(i);
+        if(i == fileNo)
+        {
+            Console.WriteLine("Found file");
+        }
+    }
+}
+
+int SearchFile = GetMyFile(15);
+
+```
+
+```csharp
+class CAR
+{
+  public string model;
+  public string color;
+  public int year;
+
+  // Create a class constructor with multiple parameters
+  public CAR(string modelName, string modelColor, int modelYear)
+  {
+    model = modelName;
+    color = modelColor;
+    year = modelYear;
+  }
+}
+
+CAR myCar = new CAR("Tata", "yellow", 2015);
+int x = 10;
+
+CAR GetMyCar(int numberplate)
+{
+    for(int i =1; i<=25; i++)
+    {
+        //Console.WriteLine(i);
+        if(i == numberplate)
+        {
+            return myCar;
+        }
+    }
+
+    return null;
+}
+```

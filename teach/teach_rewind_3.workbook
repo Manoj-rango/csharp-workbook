@@ -1,0 +1,165 @@
+---
+uti: com.xamarin.workbook
+id: 96f743a0-a503-4985-a247-6725b15c7b42
+title: teach_rewind_3
+platforms:
+- Console
+---
+
+```csharp
+/* Market prices for rice
+above 100kilos. 1kg price = 35.4₹
+above 1000 kilos. 1kg price = 36.2₹
+above 10000 kilos. 1 kg price = 36.5₹
+below 100 kilos. 1kg price = 34₹
+
+Market prices for chilli
+above 100kilos. 1kg price = 89.4₹
+above 1000 kilos. 1kg price = 92.2₹
+above 10000 kilos. 1 kg price = 93.5₹
+below 100 kilos. 1kg price = 72₹
+
+
+Log price based on kilos provided by farmer. Use Minimum 2 functions
+
+ */
+
+float GetRicePrice(float kilos)
+{
+    float price = 0;
+    if(kilos < 100)
+    {
+        price = (kilos * 34f);
+    }
+    else if (kilos >= 100 && kilos < 1000)
+    {
+        price = (kilos * 35.4f);
+    }
+    else if (kilos >= 1000 && kilos < 10000)
+    {
+        price = (kilos * 36.2f);
+    }
+    else if (kilos >= 10000)
+    {
+        price = (kilos * 36.5f);
+    }
+    
+    return price;
+}
+
+float GetChilliPrice(float kilos)
+{
+    float price = 0;
+    if(kilos < 100)
+    {
+        price = (kilos * 72);
+    }
+    else if (kilos >= 100 && kilos < 1000)
+    {
+        price = (kilos * 89.4f);
+    }
+    else if (kilos >= 1000 && kilos < 10000)
+    {
+        price = (kilos * 92.2f);
+    }
+    else if (kilos >= 10000)
+    {
+        price = (kilos * 93.5f);
+    }
+    
+    return price;
+}
+
+void GetCornPrice(float kilos)
+{
+    float price = 0;
+    if(kilos < 100)
+    {
+        price = (kilos * 72);
+    }
+    else if (kilos >= 100 && kilos < 1000)
+    {
+        price = (kilos * 89.4f);
+    }
+    else if (kilos >= 1000 && kilos < 10000)
+    {
+        price = (kilos * 92.2f);
+    }
+    else if (kilos >= 10000)
+    {
+        price = (kilos * 93.5f);
+    }
+    
+    Console.WriteLine("corn price: " + price);
+}
+
+void MarketCalculator(float ChilliKilos, float RiceKilos)
+{
+    Console.WriteLine( (GetRicePrice(RiceKilos) + GetChilliPrice(ChilliKilos)) + " Rupees");
+    GetCornPrice(20);
+}
+
+MarketCalculator(2, 120);
+```
+
+```csharp
+float GetCornPrice(float kilos){
+    float price = 0;
+
+    if(kilos > 20)
+    {
+        price = (kilos * 25);
+    }
+
+    return price;
+}
+
+GetCornPrice(15);
+```
+
+```csharp
+//BASIC LOGICS OF PROGRAM
+//defination = creating type variables, functions, containers
+int x;
+
+void boo()
+{
+
+}
+
+string[] names = new string[] {};
+
+//assignment
+x = 10;
+names = new string[] {"chanti", "nani"};
+names.Append("lalli");
+
+//calling/invoking a function
+boo();
+```
+
+```csharp
+//different kinds of function
+void AddfunctionBasic(int x, int y){
+    Console.WriteLine(x + y);
+}
+
+int AddfunctionReturn(int x, int y)
+{
+    return (x+y);
+}
+
+// AddfunctionBasic(2,4);
+AddfunctionReturn(2,4);
+
+int x= 10;
+int y = 5;
+int z = AddfunctionReturn(x,y);
+```
+
+```csharp
+//always start a function with void
+void Countgrades(){
+    
+}
+```

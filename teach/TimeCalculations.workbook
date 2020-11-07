@@ -1,0 +1,30 @@
+---
+uti: com.xamarin.workbook
+id: acb5f83e-0887-4051-b08f-62e2cfa63f52
+title: TimeCalculations
+platforms:
+- Console
+---
+
+```csharp
+int hour1 = 15;
+int minute1 = 49;
+int second1 = 00;
+
+void AddTime(int hour2,int minute2,int second2)
+{
+    int hour,minute,second;
+
+    second = second1 + second2;
+	minute = minute1 + minute2 + (second/60);
+	hour = hour1 + hour2 + (minute/60);
+	minute = (minute%60);
+	second = (second%60);
+    hour = (hour%24);
+
+    Console.WriteLine($"Time = {hour}:{minute}:{second}");
+}
+
+AddTime(3,30,0);
+AddTime(1,0,0);
+```

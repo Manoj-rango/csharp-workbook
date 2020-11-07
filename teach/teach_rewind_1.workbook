@@ -1,0 +1,341 @@
+---
+uti: com.xamarin.workbook
+id: fb52b109-97de-4cbc-96ab-564694e61212
+title: teach_rewind_1
+platforms:
+- Console
+---
+
+```csharp
+for(int i =0; i<10; i++) //incremental loop similar to 'functions'
+{
+    Console.WriteLine(i);
+}
+
+void function1(int param1)
+{
+
+}
+```
+
+```csharp
+int i= 0;
+while(i < 10) // conditional loop similar to 'if statement'
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+if(i < 2)
+{
+
+    
+}
+```
+
+```csharp
+void Addwith2(float param1)
+{
+    float val = (param1 + 2.0f);
+    Console.WriteLine(val);
+}
+
+Addwith2(2.3f);
+```
+
+```csharp
+/* = assignment operator*/
+int x = 10;
+
+
+//no returns
+void IsOddNUmber(int param1)
+{
+    
+}
+
+//will return integer
+int Addwith2 (int param1)
+{
+    int val = (param1 + 2);
+    return val;
+}
+
+//No returns
+void Addwith3 (int param1)
+{
+    int val = (param1 + 3);
+}
+
+
+int y = Addwith2(x);
+Addwith3(47);
+```
+
+```csharp
+/* check if number is Odd and then add with 20 */
+
+int x= 11;
+if((x % 2)==1)
+{
+    x+= 20;
+    Console.WriteLine(x);
+}
+```
+
+```csharp
+/* check if number is Odd and then add with 20. Use functions for Reusability */
+//METHOD #1
+
+//check is number is odd
+bool IsOddNumber(int param1)
+{
+    if((param1 % 2) == 1)
+    {
+        return true;
+    }
+    return false;
+}
+
+void Addwith(int val, int increment)
+{
+    int result = (val + increment);
+    Console.WriteLine(result);
+}
+
+int val = 12;
+
+if(IsOddNumber(val))
+{
+    Addwith(val, 20);
+}
+else
+{
+    Console.WriteLine("given value is not odd");
+}
+```
+
+```csharp
+/* check if number is Odd and then add with 20. Use functions for Reusability */
+//METHOD #2
+
+bool OddIncrementer(int val, int increment)
+{
+    if((val % 2)==1)
+    {
+        val += increment;
+        Console.WriteLine(val);
+        return true;
+    }
+    return false;
+}
+
+int x = 13;
+OddIncrementer(x, -15);
+```
+
+```csharp
+/* Check if account balance is above 10,000 and then give a discount for 10%. Print discounted price*/
+
+//balance check
+//product price = 1,000. discount = 900
+
+float accountbalance = 11000;
+float productPrice = 1000;
+if(accountbalance >= 10000)
+{
+    float discountedPrice = (productPrice * 0.90f);
+    Console.WriteLine($"Discounted price for {productPrice} is {discountedPrice}");
+}
+else
+{
+    Console.WriteLine($"Your bank balance is less than 10,000");
+  
+}
+```
+
+```csharp
+/* Check if account balance is above 10,000 and then give a discount for 10%. Print discounted price*/
+/*Discount checker*/
+
+float DiscountChecker(float balance, float price )
+{
+    if(balance >= 10000)
+    {
+        float discountedPrice = (price * 0.90f);
+        Console.WriteLine($"Discounted price for {price} is {discountedPrice}");
+        return discountedPrice;
+    }
+    else
+    {
+        Console.WriteLine($"Your bank balance is less than 10,000");
+        return 0;
+    } 
+}
+
+DiscountChecker(102200.89f, 599.99f);
+```
+
+```csharp
+/* log different grades based on percentage 
+50% - 60% 3nd class
+60% - 70% 2st calss
+70% - 90% 1st class
+90% - Distinction
+*/
+
+void GradeCalculator(int score)
+{
+    float percent = (score/1000f) * 100;
+
+    if(percent >= 90)
+    {
+
+    }
+    else if (percent >= 70 && percent < 90)
+    {
+
+    }
+    else if(percent >= 60 && percent < 70)
+    {
+
+    }
+
+}
+
+GradeCalculator(678);
+```
+
+```csharp
+// int x = 4/3;
+int score = 567;
+float y = (score/1000f) * 100;
+```
+
+```csharp
+/* Market prices for rice
+above 100kilos. 1kg price = 35.4₹
+above 1000 kilos. 1kg price = 36.2₹
+above 10000 kilos. 1 kg price = 36.5₹
+below 100 kilos. 1kg price = 34₹
+
+Market prices for chilli
+above 100kilos. 1kg price = 89.4₹
+above 1000 kilos. 1kg price = 92.2₹
+above 10000 kilos. 1 kg price = 93.5₹
+below 100 kilos. 1kg price = 72₹
+
+
+Log price based on kilos provided by farmer. Use Minimum 2 functions
+
+ */
+
+float GetRicePrice(float kilos)
+{
+    return 0;
+}
+
+float GetChilliPrice(float kilos)
+{
+    return (kilos * 35.4f);
+}
+
+void MarketCalculator(float ChilliKilos, float RiceKilos)
+{
+    Console.WriteLine( (GetRicePrice(RiceKilos) + GetChilliPrice(ChilliKilos)) + " Rupees");
+}
+
+MarketCalculator(2, 120);
+```
+
+```csharp
+/* Store price calculator
+1. Add prices to a list(with product name)
+2. Get Total Prices
+3. Print Total bill of purchased
+for ex:
+purchasedPrice.add(10.2f)
+purchasedName.add("Shampoo 200ml")
+
+purchasedPrice.add(12.2f)
+purchasedName.add("Eggs whole pack")
+*/
+
+void AddToStore(float Price, string name)
+{
+
+}
+
+void GetTotalPrice()
+{
+
+}
+
+void GetTotalList()
+{
+
+}
+```
+
+```csharp
+/*Adding items in a list*/
+
+List<float> prices = new List<float>();
+
+prices.Add(10.2f);
+prices.Add(23.4f);
+prices.Add(20.9f);
+prices.Add(25.4f);
+
+float totalprices = 0;
+for(int i=0; i<prices.Count; i++)
+{
+    Console.WriteLine($"index of {i} is {prices[i]}");
+    totalprices += prices[i];
+    Console.WriteLine($"total price at {i} is {totalprices}");
+    
+}
+
+Console.WriteLine("total prices = " + totalprices);
+```
+
+```csharp
+/*Check for different discount codes
+DIWALI50 - give 50% discount
+HOLI20 - give 20% discount
+SUMMERSALE - give 10% discount
+
+Write a function that takes parameters of product price and disocunt code. Return discounted price
+*/
+```
+
+```csharp
+/* TimeZone calculator
+Delhi: GMT +5:30
+Amsterdam : GMT +2
+London : GMT +1
+Sydney : GMT +10
+NewYork : GMT-4
+SaoPaolo : GMT -3
+
+Get All the times based on your current location time in 12hrs and 24hrs
+*/
+```
+
+```csharp
+/*
+password calculator
+
+userServer = ["user0", "user1", "user2"]
+passswordServer = ["password0", "password1", "password2"]
+
+check for valid login
+*/
+```
+
+```csharp
+/*Do Grocery Billing
+Track products, prices, quantity and print them
+ex: https://4.bp.blogspot.com/-IKMzgmUV19k/VFvs0nPjiGI/AAAAAAAAAAg/_WBWrxk4TUw/s1600/2014-11-06%2B04.17.29%2Bpm.png
+*/
+```

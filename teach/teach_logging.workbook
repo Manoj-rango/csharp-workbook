@@ -1,0 +1,100 @@
+---
+uti: com.xamarin.workbook
+id: 020d72da-2d09-4278-8cac-d5edfc107fa4
+title: teach_logging
+platforms:
+- Console
+---
+
+```csharp
+/*logging messages*/
+//strings
+Console.WriteLine("HELLO WORLD!");
+
+//integers
+Console.WriteLine(2);
+
+//integers - mathematical operations
+Console.WriteLine((4 * 2) + 3);
+
+//concatenation: ONLY string and integers
+Console.WriteLine("this is 3: " + 3);
+
+//concatenation: ONLY string and mathematical operations
+Console.WriteLine("multiply of 4 and 3 : " + (4 * 3));
+```
+
+```csharp
+/*basic types and variable definations*/
+//integer
+int a = 10;
+//floats
+float b = 10.298f;
+//double used for precision floating point decimals
+double c = 10.5454987987;
+//strings
+string d = "this is a string";
+
+Console.WriteLine(b);
+```
+
+```csharp
+/*Assignment operations*/
+// assignment operator: =
+int val = 10;
+Console.WriteLine(val);
+// incremental assignment operator : +=
+val += 20; //add
+Console.WriteLine(val);
+// decremental assignment operator : +=
+val -= 15;
+Console.WriteLine(val);
+
+Console.WriteLine("------");
+
+// incremental assignment operator by one : ++
+int x = 10;
+Console.WriteLine(x);
+x++;
+Console.WriteLine(x);
+// decremental assignment operator by one : --
+int y = 15;
+y--;
+Console.WriteLine(y);
+```
+
+```csharp
+/*variable calculations*/
+int x = 10;
+int y = 20;
+int z = x * y;
+
+Console.WriteLine(z);
+```
+
+```csharp
+/*logging with variables*/
+int val1 = 10;
+int val2 = 20;
+int val3 = val1 * val2;
+
+//concatenation: ONLY string and integers
+Console.WriteLine("this is 3: " + 3);
+//concatenation: string with strings
+Console.WriteLine("if x = "+ "val1");
+
+//concatenation: string and variables
+Console.WriteLine("if x = " + val1);
+Console.WriteLine("if x = {val1}");
+Console.WriteLine($"if x = {val1}"); //different format of  concatenation using $ and {}
+Console.WriteLine("if x = "+ val1 + " and y = " + val2 + " than multiply of  x and  y = " + val3); 
+```
+
+```csharp
+//Linear/Sequential code
+int val1 = 10;
+int val2 = 20;
+int val3 = val1 * val2;
+
+val += 10;
+```

@@ -1,0 +1,78 @@
+---
+uti: com.xamarin.workbook
+id: 336a89e2-99ea-497f-8912-b9c7fbb21472
+title: teach_functions
+platforms:
+- Console
+---
+
+```csharp
+/*basic function:  A code block(like a container of code) that contains a series of statements which can be re-used. They Should be declared first and called at any time*/
+/*Arrays,Lists are data containers. Functions are code containers */
+
+void MultiplyNoParams() // declaration
+{
+    Console.WriteLine("Multiply of 40 and 3: " + (40*3)); //block of code
+}
+
+MultiplyNoParams(); //Calling a function
+```
+
+```csharp
+/*void function with params*/
+void Multiply(int param1, int param2)
+{
+    Console.WriteLine($"Multiply of {param1} and {param2}: {(param1*param2)}"); //block of code
+}
+
+Multiply(10, 40);
+Multiply(20, 4);
+```
+
+```csharp
+/*functions with Return values*/
+int MultiplyInt(int param1, int param2)
+{
+    //block of code
+    Console.WriteLine("param1 = " + param1);
+    Console.WriteLine("@before return | param2 = " + param2);
+    return (param1 * param2); // 'return' is a exit command which takes data of given type
+    //Console.WriteLine("@after return |param2 = " + param2);
+}
+
+int x = 50;
+int y = 20;
+int mul = MultiplyInt(x,y);
+```
+
+```csharp
+/*bool return*/
+bool IsEvenNumber(int number)
+{
+    if((number % 2) == 0)
+    {
+        return true; // exits if it is true
+    }
+
+    return false; // exits if it false
+}
+
+IsEvenNumber(10);
+```
+
+```csharp
+List<int> rupees = new List<int> {10, 20, 50 ,100, 200};
+rupees.Add(500);
+rupees.Remove(1000);
+
+void IsNoteDuplicated(int note)
+{
+    if(rupees.Contains(note))
+    {
+        Console.Write($"we already printed this note {note}");
+    }
+    
+}
+
+IsNoteDuplicated(100);
+```

@@ -1,0 +1,141 @@
+---
+uti: com.xamarin.workbook
+id: bd938f0a-0449-4c57-8277-41983f470c8e
+title: test_prime
+platforms:
+- Console
+---
+
+```csharp
+int count =0;
+int start = 0;
+int end = 100;
+for(int num =start; num<=end; num++)
+{
+    count = 0;
+
+    for(int i=2; i<=(num/2); i++)
+    {
+        if(num%i==0)    
+        {
+            count++;
+            break;
+        }
+    }
+
+    if(count==0 && num!= 1)
+        Console.Write("{0} ",num);
+}
+```
+
+```csharp
+bool IsPrimeNumber(int number)
+{
+    int count = 0;
+    Console.WriteLine($"index limit = {(number/2)}");
+    for(int i=2; i<=(number/2); i++)
+    {
+        Console.WriteLine($"{number}%{i} = {(number%i)}");
+        if(number%i==0)    
+        {
+            count++;
+            Console.WriteLine($"i = {i}, counts = {count}");
+            break;
+        }
+        Console.WriteLine($"i = {i}, counts = {count}");
+    }
+
+    if(count==0 && number!= 1)
+    {
+        Console.Write($"{number} is a prime");
+        return true;
+    }
+    return false;
+}
+
+IsPrimeNumber(121);
+```
+
+```csharp
+bool Function1(int localVar1)
+{
+    int localVar2 = 0;
+    for(int i=2; i<=(localVar1/2); i++)
+    {
+        if(localVar1%i==0)    
+        {
+            localVar2++;
+            break;
+        }
+    }
+
+    if(localVar2==0 && localVar1!= 1)
+    {
+        Console.Write($"{localVar1} is a prime");
+        return true;
+    }
+    return false;
+}
+
+Function1(23);
+```
+
+```csharp
+//Adding terminators to code using break
+for(int i =0; i< 10; i++)
+{
+    //Console.WriteLine("current index = " + i);
+    if(i==7)
+    {
+        Console.WriteLine("current index = " + i);
+        break;
+    }
+}//end of code
+```
+
+```csharp
+//Adding terminators to code using return
+void PrintNumber(int num)
+{
+    if(num == 2) return;
+    Console.WriteLine("printing " + num);
+}
+
+void CheckForDiscount(int discountCode)
+{
+    if(discountCode!= 79038)
+    {
+        Console.WriteLine("Invalid Discount code");
+        return;
+    }
+    Console.WriteLine("Discont applies");
+}//end of code (returns NULL)
+
+CheckForDiscount(7938);
+```
+
+```csharp
+int CheckForDiscount(int discountCode)
+{
+    if(discountCode!= 79038)
+    {
+        Console.WriteLine("Invalid Discount code");
+        return 0;
+    }
+    Console.WriteLine("Discont applies");
+    return 20;
+
+}//end of code (return brings number)
+
+CheckForDiscount(79038);
+```
+
+```csharp
+/*Check for different discount codes
+DIWALI50 - give 50% discount
+HOLI20 - give 20% discount
+SUMMERSALE - give 10% discount
+
+Write a function that takes parameters of product price and disocunt code. Return discounted price
+*/
+```

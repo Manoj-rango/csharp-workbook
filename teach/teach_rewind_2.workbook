@@ -1,0 +1,40 @@
+---
+uti: com.xamarin.workbook
+id: 8de5ef2f-f1dc-4881-93c4-1e267be5b282
+title: teach_rewind_2
+platforms:
+- Console
+---
+
+```csharp
+void ButtonInput(int number)
+{
+    Console.WriteLine(number);
+}
+int value1 = 10;//global variable
+int value2 = 20;
+
+void Addoperator()
+{
+    int value1 = 2; //local variable
+    Console.WriteLine($" {value1} + {value2} = " +  (value1 + value2));
+
+}
+
+void MultiplyOperator(int param1, int param2)
+{
+     Console.WriteLine($" {param1} x {param2} = " +  (param1 * param2));
+
+}
+
+Addoperator();
+```
+
+```csharp
+/*Type Parsing*/
+int x = 10;
+string y = "021";
+
+int y_int = int.Parse(y);
+y_int;
+```

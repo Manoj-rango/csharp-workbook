@@ -1,0 +1,262 @@
+---
+uti: com.xamarin.workbook
+id: 94db099c-f8e4-4484-8583-6d3062ad176d
+title: teach_conditional
+platforms:
+- Console
+---
+
+```csharp
+/*basic equal 'if' condition: == */
+int x = 10;
+
+if(x == 20)
+{
+    //true condition;
+    Console.WriteLine("x equal is true");
+}
+```
+
+```csharp
+/*basic equal 'if-else'condition: == */
+int x = 10;
+int y = 11;
+
+if(y == x)
+{
+    //true condition;
+     Console.WriteLine("x equals to y: " + (x == y));
+}
+else //ALWAYS REPRESENTS A FASLE CONDITION
+{
+    //false condition;
+     Console.WriteLine("x not equals to y: " + (x == y));
+}
+```
+
+```csharp
+/* greater and less than with equal check*/
+/* programs doesn't end as they are not linked together*/
+int x = 15;
+int y = 13;
+
+if(x > y)
+{
+    Console.WriteLine("x > y: " + (x > y));
+}
+
+if(x < y)
+{
+     Console.WriteLine("x < y: " + (x < y));
+}
+
+if(x >= y)
+{
+    Console.WriteLine("x >= y: " + (x >= y));
+}
+
+if(x <= y)
+{
+     Console.WriteLine("x <= y: " + (x <= y));
+}
+
+if(x == y)
+{
+     Console.WriteLine("x == y: " + (x == y));
+}
+```
+
+```csharp
+/* if-else if-else*/
+/* programs ends as soon one condition is true*/
+int x = 12;
+int y = 13;
+
+if(x < y)
+{
+    Console.WriteLine("x < y: " + (x < y));
+}
+else if(x > y) //connected to previous
+{
+     Console.WriteLine("x > y: " + (x > y));
+}
+else //connected to previous
+{
+    // all conitionss are false
+    Console.WriteLine("x:" + x + " is not greater or less than y:" +  y);
+}
+```
+
+```csharp
+/* nested if-else if-else if-else if-.......*/
+/* programs ends as soon one condition is true*/
+int x = 12;
+int y = 13;
+
+if(x < y)
+{
+    Console.WriteLine("x < y: " + (x < y));
+}
+else if(x > y) //connected to previous
+{
+     Console.WriteLine("x > y: " + (x > y));
+}
+else if(x >= y) //connected to previous
+{
+    Console.WriteLine("x >= y: " + (x >= y));
+}
+else if(x <= y) //connected to previous
+{
+     Console.WriteLine("x <= y: " + (x <= y));
+}
+else if(x == y) //connected to previous
+{
+     Console.WriteLine("x == y: " + (x == y));
+}
+```
+
+```csharp
+/* bool conditiona*/
+bool isHeComing = false; //varible is declrared
+
+//condition on a variable
+if(isHeComing) //any condition but executes only if variable it is TRUE
+{
+    Console.WriteLine("yay!");
+}
+else //always represents false
+{
+    Console.WriteLine("boooo!!!! @else");
+}
+```
+
+```csharp
+/* ! NOT operator*/
+bool isHeComing = false; //varible is declrared
+
+Console.WriteLine(!isHeComing); // logging not variable
+
+//condition on a variable
+if(!isHeComing) //any condition but executes only if variable is FALSE
+{
+    Console.WriteLine("yay!");
+}
+else //always represents false
+{
+    Console.WriteLine("boooo!!!! @else");
+}
+```
+
+```csharp
+int x= 20;
+int y= 10;
+
+if(!(x<y)) // false
+{
+    Console.WriteLine("x: " + x + " is less than y: " + y);
+}
+else if(x>y)
+{
+    Console.WriteLine("x: " + x + " is greater than y: " + y);
+}
+else 
+{
+    Console.WriteLine("x: is not less or greater than y");
+}
+```
+
+```csharp
+/* != NOT EQUAL operator*/
+int x= 10;
+int y = 10;
+
+if((x == y)) //(10 == 10)
+{
+    Console.WriteLine(x + "  " + y);
+}
+else
+{
+    Console.WriteLine("false condition");
+}
+```
+
+```csharp
+/*left side and right side: x<y y<x*/
+int x = 12;
+int y = 11;
+
+if(x < y)
+{
+    Console.WriteLine("x < y " + (x<y));
+}
+else if (y < x)
+{
+    Console.WriteLine("y < x " + (y<x));
+}
+else
+{
+    Console.WriteLine("false condition");
+}
+```
+
+```csharp
+/* || or operator*/
+bool isHeComing  = true;
+bool isSheComing = false;
+
+if(isHeComing || isSheComing) //either ONE of bool should be true, then it's a TRUE
+{
+    Console.WriteLine("one (or both) of them are coming");
+}
+else
+{
+    Console.WriteLine("both are NOT coming");
+}
+```
+
+```csharp
+/* && and operator*/
+bool isHeComing  = true;
+bool isSheComing = true;
+
+if(isHeComing && isSheComing) // ALL of bool must be true, then it's a TRUE
+{
+    Console.WriteLine("both of them are coming");
+}
+else
+{
+    Console.WriteLine("both (or one of them) are NOT coming");
+}
+```
+
+```csharp
+/* Multiple conditions using ||, &&, ==, != operator */
+// boolean conditional operators
+int x = 10;
+int y = 10;
+
+if((x < y) || (x > y))
+{
+    Console.WriteLine("x is EITHER greater or less than y");
+}
+else
+{
+    Console.WriteLine("conditions resulted in false");
+}
+```
+
+```csharp
+/* Multiple conditions using ||, &&, ==, != operator */
+// boolean conditional operators
+int x = 10;
+int y = 10;
+
+if((x < y) == (x > y) || (y < x))
+{
+    Console.WriteLine("conditions resulted in TRUE");
+}
+else
+{
+    Console.WriteLine("conditions resulted in FALSE");
+}
+```

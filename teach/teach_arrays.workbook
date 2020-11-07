@@ -1,0 +1,124 @@
+---
+uti: com.xamarin.workbook
+id: e7b6b0a8-5237-4655-9767-c607419c025f
+title: teach_arrays
+platforms:
+- Console
+---
+
+```csharp
+/*basic array format*/
+/*arrays are containers that store similiar data of similiar type*/
+/* Array size are predefined during declaration*/
+int[] even_num = new int[5]; // #1 basic declration; array is declared
+int x1 = 20;
+int x2 = 15;
+int x3 = 12;
+
+int[] odd_num = {1, 3, 5, 7, 9}; //#2 value declration
+
+int index = 2; //indexes are integers
+even_num[index] = 2;
+Console.WriteLine($"value at index even_num[{index}] = " + odd_num[index]);
+
+//re-declraing sizes
+odd_num = new int[10]; // creates a new empty list
+Console.WriteLine($"Re-clared: value at index even_num[{index}] = " + odd_num[index]);
+```
+
+```csharp
+int[] bankBalance = {1245, 3233, 52323, 23237, 92323};
+int account_no = 2; // starts from 0
+Console.WriteLine($"value at index bankBalance[{account_no}] = " + bankBalance[account_no]);
+```
+
+```csharp
+//Array methods
+int[] odd_num = {1, 3, 5, 7, 9}; //#2 value declration// size is defined at declaration
+
+Console.WriteLine("Leng of array = " + odd_num.Length);
+Console.WriteLine("Leng of array = " + odd_num[1]);
+```
+
+```csharp
+//functions or methods
+//Reusuable code containers
+void Multipy(int param1, int param2)
+{
+    Console.WriteLine(param1 * param2);
+}
+
+void MultipyNoParams()
+{
+    Console.WriteLine("No params "+ (15 * 20));
+}
+
+Multipy(15,20);
+Multipy(10,20);
+```
+
+```csharp
+int[] bankAccounts = {1245, 3233, 52323, 23237, 92323}; //size is defined to 5
+int account_no = 1; 
+Console.WriteLine($"value at index bankAccounts[{account_no}] = " + bankAccounts[account_no]);
+bankAccounts[1] += 3; //increment with 3
+Console.WriteLine($"value at index bankAccounts[{account_no}] = " + bankAccounts[account_no]);
+
+bankAccounts = new int[10]; // re-declration of size
+int[] newBankAccount = {bankAccounts[0], bankAccounts[1],bankAccounts[2],bankAccounts[3],bankAccounts[4],bankAccounts[6],5646, 44555}; // this is bad
+Console.WriteLine($"size changed: bankAccounts[{account_no}] = " + bankAccounts[account_no]);
+```
+
+```csharp
+/*Lists are dynamic arrays where a new value can be added at anytime and also can be deleted*/
+List<int> bankAccounts = new List<int>(); // list syntax
+bankAccounts.Add(123); // pushed to 0
+bankAccounts.Add(456); // pushed at 1
+
+Console.WriteLine(bankAccounts[0]); // retrieve value
+Console.WriteLine(bankAccounts.Count); //get length of items in a List
+
+bankAccounts.Add(564); // pushed at 2
+Console.WriteLine(bankAccounts[2]);
+bankAccounts.RemoveAt(2);
+Console.WriteLine("After remove @index 1 -- " + bankAccounts[1]);
+```
+
+```csharp
+List<int> odds = new List<int>(); // syntax #1 basic
+List<int> evens = new List<int> {0, 2, 4 ,6, 8, 10}; // value declration
+
+evens.Add(12);
+evens.RemoveAt(3); // remove method #1: using index(location)
+evens.Remove(4); // remove method #2: using value(data)
+evens;
+```
+
+```csharp
+List<string> sentence = new List<string> {"we", "are", "in" , "a", "lockdown"};
+
+sentence[1] = "is";
+int x = 10;
+
+Console.WriteLine(sentence[1]);
+if(sentence.Remove("is")) // 'Remove' is a method of 'List'
+{
+    Console.Write("remove success");
+}
+else
+{
+    Console.Write("remove is NOT success");
+}
+```
+
+```csharp
+//Method and propeties
+List<string> sentence = new List<string> {"we", "are", "in" , "a", "lockdown"};
+Console.Write(sentence.Count); // using a 'property' of List' 
+sentence.Add("because"); // using a 'Method' of List'
+sentence.Remove("because"); // using a 'Method' of List'
+```
+
+```csharp
+//Method returns
+```
