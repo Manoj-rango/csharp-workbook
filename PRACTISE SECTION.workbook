@@ -1,0 +1,7 @@
+---
+uti: com.xamarin.workbook
+id: 71f2c848-f29c-4d1a-bd15-3f173760fe3d
+title: PRACTISE section
+platforms:
+- Console
+---
