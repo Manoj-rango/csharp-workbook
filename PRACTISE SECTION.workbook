@@ -5,3 +5,27 @@ title: PRACTISE section
 platforms:
 - Console
 ---
+
+```csharp
+string [] userserver = new string[]{"user0", "user1", "user2"};
+string [] passwordserver = new string[] {"password0", "password1", "password2"};
+
+void logging ( string userid , string passwordid )
+{
+
+    int userindex = Array.IndexOf (userserver,userid);
+    int passwordindex = Array.IndexOf(passwordserver,passwordid);
+
+    if (userindex == passwordindex)
+    {
+        Console.WriteLine("login successsful ");
+    }
+    else 
+    {
+        Console.WriteLine(" login unsuccessful");
+    }
+
+}
+
+logging("user1","password1");
+```
