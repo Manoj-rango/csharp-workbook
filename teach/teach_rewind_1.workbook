@@ -334,6 +334,18 @@ check for valid login
 ```
 
 ```csharp
+/*
+password calculator
+
+use Dictioanry
+Dictionary<string, string> logins = new Dictionary<string, string>();
+logins.Add("user1", "Password1");
+
+check for valid login
+*/
+```
+
+```csharp
 /*Do Grocery Billing
 Track products, prices, quantity and print them
 ex: https://4.bp.blogspot.com/-IKMzgmUV19k/VFvs0nPjiGI/AAAAAAAAAAg/_WBWrxk4TUw/s1600/2014-11-06%2B04.17.29%2Bpm.png
