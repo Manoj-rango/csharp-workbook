@@ -1,0 +1,56 @@
+---
+uti: com.xamarin.workbook
+id: 83180d30-a984-499d-b9b3-e32ad4935bef
+title: teach_Billing
+platforms:
+- Console
+---
+
+```csharp
+List<int> listed = new List<int>();
+//Dictionary stores values based on KEY and VALUE
+Dictionary<int, string> products = new Dictionary<int, string>();
+products.Add(1345, "Onions");
+
+//struct is a container of multiple datatypes
+struct BillProduct
+{
+    int ProductId;
+    public string ProductName;
+    public float ProductPrice;
+    public int ProductQuantity;
+    public float ProductDiscount;
+
+    float GetTotalPrice()
+    {
+        return (ProductPrice * ProductDiscount) * ProductQuantity;
+    }
+}
+
+
+Dictionary<int, BillProduct>  BilledProducts = new Dictionary<int, BillProduct>();
+
+BillProduct onions = new BillProduct();
+onions.
+```
+
+```csharp
+struct BankAccountData
+{
+    public long BankID;
+    public string AccountName;
+    public int DOB;
+    public long Aadhar;
+    public bool carloan;
+}
+
+Dictionary<long, BankAccountData> accounts = new Dictionary<long, BankAccountData>();
+//create new account data for account1
+BankAccountData Account1 = new BankAccountData();
+Account1.BankID = 2525226737232323;
+Account1.AccountName = "asdfsdf";
+
+accounts.Add(Account1.BankID, Account1); // adding new data
+
+BankAccountData getAcoount =  accounts[2525226737232323]; //gettting data
+```
