@@ -58,6 +58,12 @@ FruitProducts.Add(oranges.ProductId, oranges);
 //create Bill struct
 struct BillProduct
 {
+    //constructors
+    BillProduct(FruitProduct _fruit, int _quantity)
+    {
+        Fruit = _fruit;
+        Quantity = _quantity;
+    }
     public FruitProduct Fruit;
     public int Quantity;
     
@@ -66,6 +72,13 @@ struct BillProduct
         return (Fruit.ProductPrice * Fruit.ProductDiscount) * Quantity;
     }
 }
+
+//create Bill Database
+Dictionary<int, BillProduct> BillData = new Dictionary<int, BillProduct>();
+
+//Scan for products
+//scanned item #3
+BillData.Add(1, new BillProduct())
 ```
 
 ```csharp
