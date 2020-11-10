@@ -7,6 +7,24 @@ platforms:
 ---
 
 ```csharp
+//struct type-declration
+struct BankAccountData
+{
+    public long BankID;
+    public string AccountName;
+    public int DOB;
+    public long Aadhar;
+    public bool carloan;
+}
+//creating a new variable/instance of struct
+BankAccountData Account1 = new BankAccountData();
+
+// filling struct 'public' variables
+Account1.BankID = 110012345678;
+Account1.AccountName = "Chanti";
+```
+
+```csharp
 struct BankAccountData
 {
     public long BankID;
