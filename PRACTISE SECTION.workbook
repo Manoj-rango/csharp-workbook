@@ -202,3 +202,20 @@ products list == given bill product items
 
 */
 ```
+
+```csharp
+ Dictionary<string, string> logins = new Dictionary<string, string>();
+logins.Add("user1", "Password1");
+logins.Add("user2", "Password2");
+logins.Add("user3", "Password3");
+logins.Add("user4", "Password4");
+
+logins.ContainsKey("user1");
+//logins.ContainsValue("Password1");
+string serverpwd = logins["user4"];
+string seerveruser = logins["Password2"];
+
+
+
+
+```
