@@ -1,0 +1,44 @@
+---
+uti: com.xamarin.workbook
+id: e49727af-7915-406f-b926-8ab6d78c111a
+title: teach_Structs
+platforms:
+- Console
+---
+
+```csharp
+struct BankAccountData
+{
+    public long BankID;
+    public string AccountName;
+    public int DOB;
+    public long Aadhar;
+    public bool carloan;
+}
+
+Dictionary<long, BankAccountData> accounts = new Dictionary<long, BankAccountData>();
+//create new account data for account1
+BankAccountData Account1 = new BankAccountData();
+Account1.BankID = 2525226737232323;
+Account1.AccountName = "asdfsdf";
+
+accounts.Add(Account1.BankID, Account1); // adding new data
+
+BankAccountData getAcoount =  accounts[2525226737232323]; //gettting data
+```
+
+```csharp
+Dictionary<string, string> logins = new Dictionary<string, string>();
+logins.Add("user1", "Password1");
+logins.Add("user2", "Password2");
+logins.Add("user3", "Password3");
+logins.Add("user4", "Password4");
+
+logins.ContainsKey("user1");
+//logins.ContainsValue("Password1");
+string serverpwd = logins["user4"];
+string seerveruser = logins["Password2"];
+
+
+
+```
