@@ -145,12 +145,7 @@ Addwith2(12);
 ```
 
 ```csharp
-for (int i = 0; i<=19; i++)
-{
-    //i++;
-    Console.WriteLine(i);
-    //i++;
-}for (int i = 0; i<=19; i++)
+for (int i = 0; i<=3; i++)
 {
     //i++;
     Console.WriteLine(i);
@@ -204,18 +199,59 @@ products list == given bill product items
 ```
 
 ```csharp
+Dictionary<int, string> indexes = new Dictionary<int, string>();
+indexes.Add(1, "First");
+indexes.Add(2, "Second");
+indexes.Add(3, "Third");
+indexes.Add(4, "Four");
+
+int givenid = 2;
+string givenpwd = "Second";
+
+if(indexes.ContainsKey(givenid))
+{
+    if(givenpwd == indexes[givenid])
+    {
+        Console.WriteLine("login successful");
+    }
+    else
+    {
+        Console.WriteLine("login unsuccessful");
+    }
+}
+else
+{
+    Console.WriteLine("user not available");
+}
+```
+
+```csharp
  Dictionary<string, string> logins = new Dictionary<string, string>();
 logins.Add("user1", "Password1");
 logins.Add("user2", "Password2");
 logins.Add("user3", "Password3");
 logins.Add("user4", "Password4");
 
-logins.ContainsKey("user1");
-//logins.ContainsValue("Password1");
-string serverpwd = logins["user4"];
-string seerveruser = logins["Password2"];
+string givenuser = ("user1");
+string givenpwd = ("password1");
 
+if( logins.ContainsKey(givenuser))
+{
+    if( givenpwd == logins[givenuser])
+    {
+        Console.WriteLine("login successful");
+    }
 
+    else
+    {
+         Console.WriteLine("login unsuccessful");
+    }
 
+}
+
+else
+{
+    Console.WriteLine("user not available");
+}
 
 ```
