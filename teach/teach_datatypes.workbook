@@ -1,0 +1,87 @@
+---
+uti: com.xamarin.workbook
+id: c41d716e-fbe7-40a5-9176-5cbc784599c6
+title: teach_datatypes
+platforms:
+- Console
+---
+
+```csharp
+/*----BASIC data types - int, float, string, long*/
+int x = 1; //x is a instance/variable of 'int' type that can be assigned a value
+float y = 2.5f;
+
+/*----ARRAYS - can store data of ONE type. You can index each value that is stored and use for loop to retrieve*/
+//1. List- //can update array size dynamically
+List<int> odds = new List<int>(){1 ,2 ,3}; 
+odds.Add(4); //You can add more data later becuause lists are dynamic
+
+//2. Array - //Array size is based on declaration. In this example, you cannot store more than 4 values
+int[] evens = new int[4]{2,4,6,8}; 
+
+/*----ARRAYS - can store data of TWO types. You can index each value that is stored and use for loop to retrieve*/
+Dictionary<int, string> logins = new Dictionary<int, string>{ //Dictonaries are same as Lists. You can add data dynammically.
+    {1456, "First"}, //key, value
+    {2234, "Second"} //key, value
+};
+
+Console.WriteLine(logins[1456]); //Use 'key' to retrieve values. There is no indexing
+
+/*----Custom Data types = you create a new DATA TYPE----*/
+//1.Structs - Can store any data type like int, Lists, Dictionaries. But cannot be looped. ONlY for storing DATA after CREATING an instance
+struct Fruits //a new data type. NOT a variable/instance
+{
+    public int FruitID; //Field
+    public string FruitName; //Field
+    public float FruitPrice; //Field
+    public float FruitDiscount; //Field
+    
+    public float GetDicountedPrice() //Method
+    {
+        Console.WriteLine("Dicounted price: " + (FruitDiscount * FruitPrice));
+        return (FruitDiscount * FruitPrice);
+    }
+}
+//int  x     = 10;
+Fruits apple = new Fruits(); //create a new instace of struct
+apple.FruitID = 123; //assign value to it's Field
+apple.FruitName = "Apple";
+apple.FruitPrice = 4.7f;
+apple.FruitDiscount = 0.92f;
+apple.GetDicountedPrice();
+
+
+```
+
+```csharp
+//Assigning Data during declaration
+int x; //declration
+int y = 10; //Declaration and assignment
+
+List<int> odds = new List<int>(){1,3,5,7};
+Dictionary<int, string> logins = new Dictionary<int, string>() {
+    {1, "First"},
+    {2, "Second"}
+    };
+
+struct Fruits
+{
+    //constructor
+    public Fruits(int _id, string _name, float _price)
+    {
+        id = _id;
+        name = _name;
+        price = _price;
+    }
+
+    public int id;
+    public string name;
+    public float price;
+}
+
+Fruits apple = new Fruits(11, "Apple", 20.3f);//
+// Console.WriteLine(apple.name);
+
+Fruits orange = new Fruits();
+Console.WriteLine(orange.name);
+```
