@@ -7,7 +7,7 @@ platforms:
 ---
 
 ```csharp
-string [] userserver = new string[]{"user0", "user1", "user2"};
+      string [] userserver = new string[]{"user0", "user1", "user2"};
 string [] passwordserver = new string[] {"password0", "password1", "password2"};
 
 void logging ( string userid , string passwordid )
@@ -253,5 +253,87 @@ else
 {
     Console.WriteLine("user not available");
 }
+```
+
+```csharp
+/* DO CLOTHES BILLING 
+Essential things product ,quantity , price 
+*/
+
+// --------DATABASE for clothing 
+// declaring clothing STRUCT
+
+struct ClothesProduct
+{
+    public int ProductId;
+    public string ProductName;
+    public float ProductPrice;
+    public float ProductDiscount;
+
+}
+
+//create Tracks instance
+ClothesProduct Tracks = new ClothesProduct();             //percentage conversion 
+Tracks.ProductId = 1;
+Tracks.ProductName = "Tracks";
+Tracks.ProductPrice = 550.34f;
+Tracks.ProductDiscount = 10;
+
+//create SportsWear instance
+ClothesProduct SportsWear = new ClothesProduct();
+SportsWear.ProductId = 2;
+SportsWear.ProductName = "SportsWear";
+SportsWear.ProductPrice = 200.23F;
+SportsWear.ProductDiscount = 5;
+
+//create Shirt instance
+ClothesProduct Shirt  = new ClothesProduct();
+Shirt .ProductId = 3;
+Shirt .ProductName = "Shirt";
+Shirt .ProductPrice = 600.54f;
+Shirt .ProductDiscount = 0.9f;
+
+//create Lowers instance
+ClothesProduct Lowers = new ClothesProduct();
+Lowers.ProductId = 4;
+Lowers.ProductName = "Lowers";
+Lowers.ProductPrice = 400.45f;
+Lowers.ProductDiscount = 0.9f;
+
+
+//Create database of ClotheProducts
+Dictionary<int, ClothesProduct>  ClotheProducts = new Dictionary<int, ClothesProduct>();
+ClotheProducts.Add(Tracks.ProductId, Tracks);
+ClotheProducts.Add(SportsWear.ProductId, SportsWear);
+ClotheProducts.Add(Shirt.ProductId, Shirt);
+ClotheProducts.Add(Lowers.ProductId, Lowers);
+
+
+//-----------Billing----------------------
+//create Bill struct
+struct BillProduct
+{
+    //constructors
+    BillProduct(ClothesProduct _Clothe, int _quantity)
+    {
+        _Clothe = _Clothe;
+        Quantity = _quantity;
+    }
+    public ClothesProduct Fruit;
+    public int Quantity;
+    
+    public float GetBillPrice()
+    {
+        return (Fruit.ProductPrice * Fruit.ProductDiscount) * Quantity;
+    }
+}
+
+//create Bill Database
+Dictionary<int, BillProduct> BillData = new Dictionary<int, BillProduct>();
+
+//Scan for products
+//scanned item #3
+BillData.Add(1, new BillProduct())
+
 
 ```
