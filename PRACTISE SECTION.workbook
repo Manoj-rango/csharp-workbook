@@ -406,3 +406,26 @@ Console.WriteLine(watermelon.id);
 int q; // decleration 
 int w = 13; //decleration and assigining values
 ```
+
+```csharp
+struct Fruits
+{
+    public int fruitId;
+    public string  fruitname;
+    public float fruitprice;
+    public float Discountprice;
+     public float getdiscountprice()
+    {
+        Console.WriteLine("discountprice =" + (Discountprice * fruitprice ));
+        return (Discountprice * fruitprice );
+    }
+}
+
+Fruits apple = new Fruits();
+apple.fruitId = 123;
+apple.fruitname = "apple";
+apple.fruitprice = 20.3f;
+apple.Discountprice = 0.9f;
+
+apple.getdiscountprice();
+```
