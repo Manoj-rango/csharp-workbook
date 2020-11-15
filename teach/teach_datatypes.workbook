@@ -49,8 +49,6 @@ apple.FruitName = "Apple";
 apple.FruitPrice = 4.7f;
 apple.FruitDiscount = 0.92f;
 apple.GetDicountedPrice();
-
-
 ```
 
 ```csharp
@@ -84,4 +82,40 @@ Fruits apple = new Fruits(11, "Apple", 20.3f);//
 
 Fruits orange = new Fruits();
 Console.WriteLine(orange.name);
+```
+
+```csharp
+/*Looping - iteration*/
+//arrays
+int[] odds = new int[5]{1,3,5,7,9};
+for(int i =0; i< 3; i++) //you can limit the for loop search
+{
+    Console.WriteLine(odds[i]);
+}
+//
+foreach(var item in odds) //you can't limit foreach loop. It accesses entire contatiner
+{
+    Console.WriteLine(item);
+}
+```
+
+```csharp
+Dictionary<string, string> logins = new Dictionary<string, string>() {
+    {"user1", "First"},
+    {"user2", "Second"},
+    {"user3", "Third"},
+    {"user4", "Fourth"}
+    };
+
+
+
+foreach(var item in logins)
+{
+    Console.WriteLine(item.Key + "  " + item.Value);
+}
+
+int x = 10;
+var y = 20;
+var apple = new Fruits(1234, "Mango", 5.3f);
+var name = "Chanti";
 ```

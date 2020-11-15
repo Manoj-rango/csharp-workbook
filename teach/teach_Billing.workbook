@@ -7,14 +7,14 @@ platforms:
 ---
 
 ```csharp
-x   /*Do Grocery Fruits Billing
+/*Do Grocery Fruits Billing
 Track products, prices, quantity and print them
 ex: https://4.bp.blogspot.com/-IKMzgmUV19k/VFvs0nPjiGI/AAAAAAAAAAg/_WBWrxk4TUw/s1600/2014-11-06%2B04.17.29%2Bpm.png
 */
 
 //-----------Create Database for fruits----------------------
 //Declare Fruit Struct
-struct FruitProduct
+struct FruitStruct
 {
     public int ProductId;
     public string ProductName;
@@ -23,48 +23,48 @@ struct FruitProduct
 }
 
 //create apple instance
-FruitProduct apples = new FruitProduct();
+FruitStruct apples = new FruitStruct();
 apples.ProductId = 1;
 apples.ProductName = "Apples";
 apples.ProductPrice = 1.2f;
 apples.ProductDiscount = 1;
 //create mango instance
-FruitProduct mangos = new FruitProduct();
+FruitStruct mangos = new FruitStruct();
 mangos.ProductId = 2;
 mangos.ProductName = "mangos";
 mangos.ProductPrice = 2.2f;
 mangos.ProductDiscount = 1;
 //create watermelons instance
-FruitProduct watermelons = new FruitProduct();
+FruitStruct watermelons = new FruitStruct();
 watermelons.ProductId = 3;
 watermelons.ProductName = "watermelons";
 watermelons.ProductPrice = 10.5f;
 watermelons.ProductDiscount = 0.9f;
 //create oranges instance
-FruitProduct oranges = new FruitProduct();
+FruitStruct oranges = new FruitStruct();
 oranges.ProductId = 4;
 oranges.ProductName = "oranges";
 oranges.ProductPrice = 3.5f;
 oranges.ProductDiscount = 1;
 
 //Create database of fruit products
-Dictionary<int, FruitProduct>  FruitProducts = new Dictionary<int, FruitProduct>();
-FruitProducts.Add(apples.ProductId, apples);
-FruitProducts.Add(mangos.ProductId, mangos);
-FruitProducts.Add(watermelons.ProductId, watermelons);
-FruitProducts.Add(oranges.ProductId, oranges);
+Dictionary<int, FruitStruct>  FruitDatabase = new Dictionary<int, FruitStruct>();
+FruitDatabase.Add(apples.ProductId, apples);
+FruitDatabase.Add(mangos.ProductId, mangos);
+FruitDatabase.Add(watermelons.ProductId, watermelons);
+FruitDatabase.Add(oranges.ProductId, oranges);
 
 //-----------Billing----------------------
 //create Bill struct
-struct BillProduct
+struct BillStruct
 {
     //constructors
-    BillProduct(FruitProduct _fruit, int _quantity)
+    public BillStruct(FruitStruct _fruit, int _quantity)
     {
         Fruit = _fruit;
         Quantity = _quantity;
     }
-    public FruitProduct Fruit;
+    public FruitStruct Fruit;
     public int Quantity;
     
     public float GetBillPrice()
@@ -74,18 +74,51 @@ struct BillProduct
 }
 
 //create Bill Database
-Dictionary<int, BillProduct> BillData = new Dictionary<int, BillProduct>();
+Dictionary<int, BillStruct> BillDatabase = new Dictionary<int, BillStruct>();
+
+
+
 
 //Scan for products
-//scanned item #3
-BillData.Add(1, new BillProduct())
+//------scanned item #3-----
+int scanneditem = 3;
+BillDatabase.Add(1, new BillStruct(FruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
+scanneditem = 2;
+BillDatabase.Add(2, new BillStruct(FruitDatabase[scanneditem],4));
+scanneditem = 4;
+BillDatabase.Add(3, new BillStruct(FruitDatabase[scanneditem],5));
+
+
+//print Bill
+Console.WriteLine("items purchased " + BillDatabase.Count);
 ```
 
 ```csharp
 //create oranges instance
-FruitProduct oranges = new FruitProduct();
+FruitStruct oranges = new FruitStruct();
 oranges.ProductId = 4;
 oranges.ProductName = "oranges";
 oranges.ProductPrice = 3.5f;
 oranges.ProductDiscount = 1;
+
+BillStruct appleBill = new BillStruct(apples, 5);
+BillDatabase.Add(2, appleBill);
+
+BillDatabase.Add(3, new BillStruct());
+
+void isOdd(int number)
+{
+
+}
+void isEven(int number)
+{
+
+}
+
+int x = 30;
+isOdd(x);
+isOdd(23);
+
+isEven(x);
+isEven(34);
 ```
