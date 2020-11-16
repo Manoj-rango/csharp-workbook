@@ -24,30 +24,30 @@ struct FruitStruct
 
 //create apple instance
 FruitStruct apples = new FruitStruct();
-apples.ProductId = 1;
+apples.ProductId = 1456;
 apples.ProductName = "Apples";
 apples.ProductPrice = 1.2f;
 apples.ProductDiscount = 1;
 //create mango instance
 FruitStruct mangos = new FruitStruct();
-mangos.ProductId = 2;
+mangos.ProductId = 2567;
 mangos.ProductName = "mangos";
 mangos.ProductPrice = 2.2f;
 mangos.ProductDiscount = 1;
 //create watermelons instance
 FruitStruct watermelons = new FruitStruct();
-watermelons.ProductId = 3;
+watermelons.ProductId = 3234;
 watermelons.ProductName = "watermelons";
 watermelons.ProductPrice = 10.5f;
 watermelons.ProductDiscount = 0.9f;
 //create oranges instance
 FruitStruct oranges = new FruitStruct();
-oranges.ProductId = 4;
+oranges.ProductId = 466;
 oranges.ProductName = "oranges";
 oranges.ProductPrice = 3.5f;
 oranges.ProductDiscount = 1;
 
-//Create database of fruit products
+//Create database of fruit products with ProductId as key
 Dictionary<int, FruitStruct>  FruitDatabase = new Dictionary<int, FruitStruct>();
 FruitDatabase.Add(apples.ProductId, apples);
 FruitDatabase.Add(mangos.ProductId, mangos);
@@ -69,28 +69,39 @@ struct BillStruct
     
     public float GetBillPrice()
     {
+        return Fruit.ProductPrice * Quantity;
+    }
+
+    public float GetBillDiscountPrice()
+    {
         return (Fruit.ProductPrice * Fruit.ProductDiscount) * Quantity;
     }
 }
 
 //create Bill Database
-Dictionary<int, BillStruct> BillDatabase = new Dictionary<int, BillStruct>();
-
-
+List<BillStruct> BillList = new List<BillStruct>();
 
 
 //Scan for products
 //------scanned item #3-----
-int scanneditem = 3;
-BillDatabase.Add(1, new BillStruct(FruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
-scanneditem = 2;
-BillDatabase.Add(2, new BillStruct(FruitDatabase[scanneditem],4));
-scanneditem = 4;
-BillDatabase.Add(3, new BillStruct(FruitDatabase[scanneditem],5));
+int scanneditem = 3234;
+BillList.Add(new BillStruct(FruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
+scanneditem = 2567;
+BillList.Add(new BillStruct(FruitDatabase[scanneditem],4));
+scanneditem = 466;
+BillList.Add(new BillStruct(FruitDatabase[scanneditem],5));
 
 
 //print Bill
-Console.WriteLine("items purchased " + BillDatabase.Count);
+Console.WriteLine("items purchased " + BillList.Count);
+int count = 0;
+foreach(var billStruct in BillList)
+{
+    // int count = 0;
+    count++;
+
+    Console.WriteLine(count + " | " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹ | " + billStruct.GetBillPrice() + "₹");
+}
 ```
 
 ```csharp
@@ -102,9 +113,9 @@ oranges.ProductPrice = 3.5f;
 oranges.ProductDiscount = 1;
 
 BillStruct appleBill = new BillStruct(apples, 5);
-BillDatabase.Add(2, appleBill);
+BillList.Add(appleBill);
 
-BillDatabase.Add(3, new BillStruct());
+BillList.Add(new BillStruct());
 
 void isOdd(int number)
 {
@@ -121,4 +132,41 @@ isOdd(23);
 
 isEven(x);
 isEven(34);
+```
+
+```csharp
+int[] odds = new int[5]{177,179,181,183,185,};
+Console.WriteLine("array count = " + odds.Length);
+int count = 0;
+foreach(var item in odds)
+{
+    //Console.WriteLine("for loop - start");
+    int count = 0;
+    count++;
+    //---
+    //--
+    //--
+    Console.WriteLine("odd = " + item + " | counted = " + count);
+    //---
+    //---
+    //--
+    //Console.WriteLine("for loop - end");
+}
+
+Console.WriteLine("-----------------");
+for(int index=0; index<3; index++)
+{
+    Console.WriteLine("odd = " + odds[index] + " | index =  " + index);
+}
+```
+
+```csharp
+int count = 5;
+
+for(int i = 0; i< 5; i++)
+{
+    count++;
+    // Console.WriteLine(i + " | counted = " + count);
+    Console.WriteLine("counted = " + count);
+}
 ```
