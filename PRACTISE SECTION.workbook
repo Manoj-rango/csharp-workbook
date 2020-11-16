@@ -429,3 +429,28 @@ apple.Discountprice = 0.9f;
 
 apple.getdiscountprice();
 ```
+
+```csharp
+// Looping 
+int[] even = new int[6]{2,4,6,8,10,12};
+foreach(var item in even)
+{
+    Console.WriteLine(item);
+}
+```
+
+```csharp
+Dictionary<int , string> logins = new Dictionary<int, string>() {
+    { 1, "First"},
+    { 2 , "Second"},
+    { 3, "Third"},
+    { 4 , "Fourth"}
+    };
+
+
+
+foreach(var item in logins)
+{
+    Console.WriteLine(item.Key + "  " + item.Value);
+}
+```
