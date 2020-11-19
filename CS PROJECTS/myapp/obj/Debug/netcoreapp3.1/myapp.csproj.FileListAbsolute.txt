@@ -11,3 +11,9 @@ C:\Users\MANOJ\Documents\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.csproj.
 C:\Users\MANOJ\Documents\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.dll
 C:\Users\MANOJ\Documents\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.pdb
 C:\Users\MANOJ\Documents\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.genruntimeconfig.cache
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.csprojAssemblyReference.cache
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.AssemblyInfoInputs.cache
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.AssemblyInfo.cs
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.csproj.CoreCompileInputs.cache
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.dll
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.pdb

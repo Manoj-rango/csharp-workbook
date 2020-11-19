@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MANOJ\\Documents\\CS PROJECTS\\myapp\\myapp.csproj": {}
+    "C:\\Users\\MANOJ\\Documents\\GitHub\\csharp-workbook\\CS PROJECTS\\myapp\\myapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MANOJ\\Documents\\CS PROJECTS\\myapp\\myapp.csproj": {
+    "C:\\Users\\MANOJ\\Documents\\GitHub\\csharp-workbook\\CS PROJECTS\\myapp\\myapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MANOJ\\Documents\\CS PROJECTS\\myapp\\myapp.csproj",
+        "projectUniqueName": "C:\\Users\\MANOJ\\Documents\\GitHub\\csharp-workbook\\CS PROJECTS\\myapp\\myapp.csproj",
         "projectName": "myapp",
-        "projectPath": "C:\\Users\\MANOJ\\Documents\\CS PROJECTS\\myapp\\myapp.csproj",
+        "projectPath": "C:\\Users\\MANOJ\\Documents\\GitHub\\csharp-workbook\\CS PROJECTS\\myapp\\myapp.csproj",
         "packagesPath": "C:\\Users\\MANOJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MANOJ\\Documents\\CS PROJECTS\\myapp\\obj\\",
+        "outputPath": "C:\\Users\\MANOJ\\Documents\\GitHub\\csharp-workbook\\CS PROJECTS\\myapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

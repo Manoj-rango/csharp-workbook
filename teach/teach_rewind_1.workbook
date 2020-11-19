@@ -190,15 +190,15 @@ void GradeCalculator(int score)
 
     if(percent >= 90)
     {
-
+        Console.WriteLine( "outstanding performance");
     }
     else if (percent >= 70 && percent < 90)
     {
-
+        Console.WriteLine( " GOOD ");
     }
     else if(percent >= 60 && percent < 70)
     {
-
+        Console.WriteLine( " AVERAGE ");
     }
 
 }
