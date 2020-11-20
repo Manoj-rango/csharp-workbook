@@ -46,12 +46,12 @@ List<BillStruct> _billList = new List<BillStruct>();
     public void Start()
     {
         Console.WriteLine("Billing.Start");
-        LoadFruitDatabase();
+        CreateFruitDatabase();
         ScanAndCreateBill();
         PrintBill();
     }
 
-    void LoadFruitDatabase()
+    void CreateFruitDatabase()
     {
         //create apple instance
         FruitStruct apples = new FruitStruct();
@@ -88,11 +88,13 @@ List<BillStruct> _billList = new List<BillStruct>();
     void ScanAndCreateBill()
     {
         //Scan for products
-        //------scanned item #3-----
+        //------scanned item #3234-----
         int scanneditem = 3234;
         _billList.Add(new BillStruct(_fruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
+        //------scanned item #2567-----
         scanneditem = 2567;
         _billList.Add(new BillStruct(_fruitDatabase[scanneditem],4));
+        //------scanned item #466-----
         scanneditem = 466;
         _billList.Add(new BillStruct(_fruitDatabase[scanneditem],5));
     }
@@ -105,7 +107,6 @@ List<BillStruct> _billList = new List<BillStruct>();
         foreach(var billStruct in _billList)
         {
             count++;
-
             Console.WriteLine(count + " | " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹ | " + billStruct.GetBillPrice() + "₹");
         }
     }
