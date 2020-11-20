@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace myapp
 {
@@ -8,16 +9,12 @@ namespace myapp
         //practise entry point 
         public void Start()
         {
-            logging("user0", "password0");
-            GradeCalculator(765);
-            MarketCalculator(2, 120);
-            foreach(var BillStruct in BillList )
-        {
-            count++;
-            Console.WriteLine(count +" | "  + BillStruct.Fruit.ProductID + " | " + BillStruct.Fruit.ProductName + " | " + BillStruct.Quantity + " | " + BillStruct.Fruit.ProductPrice + "₹ | " + BillStruct.GetBillprice() + "₹ ");
-
+            // logging("user0", "password0");
+            // GradeCalculator(765);
+            // MarketCalculator(2, 120);
+            Billing();
         }
-        }
+#region Market
         /* Market prices for rice
         above 100kilos. 1kg price = 35.4₹
         above 1000 kilos. 1kg price = 36.2₹
@@ -50,7 +47,9 @@ namespace myapp
             Console.WriteLine( (GetRicePrice(RiceKilos) + GetChilliPrice(ChilliKilos)) + " Rupees");
         }
 
+#endregion
 
+#region GradeCalculator
 
         void GradeCalculator(int score)
         {
@@ -69,7 +68,10 @@ namespace myapp
                 Console.WriteLine( " AVERAGE ");
             }
 
-        }   
+        }
+#endregion
+
+#region Logging
     
         string [] userserver = new string[]{"user0", "user1", "user2"};
         string [] passwordserver = new string[] {"password0", "password1", "password2"};
@@ -102,9 +104,10 @@ namespace myapp
 
         }
 
+#endregion
 
+#region BILLING
         // BILLING fruitsproduct 
-
         struct FruitStruct
         {
             public int ProductID;
@@ -113,45 +116,7 @@ namespace myapp
             public float DiscountPrice;
         }
 
-        // creating fruits instances 
-        FruitStruct Kiwi = new FruitStruct();
-        Kiwi.ProductID = 192;
-        Kiwi.ProductName = " Kiwi";
-        Kiwi.ProductPrice = 50.2f;
-        Kiwi.DiscountPrice = 1;
-
-        
-        FruitStruct Pineapple = new FruitStruct();
-        Pineapple.ProductID = 297;
-        Pineapple.ProductName = " Pineapple";
-        Pineapple.ProductPrice = 90.23f;
-        Pineapple.DiscountPrice = 0.9f;
-
-
-        FruitStruct Avocado = new FruitStruct();
-        Avocado.ProductID = 645;
-        Avocado.ProductName = " Avocado";
-        Avocado.ProductPrice = 80.3f;
-        Avocado.DiscountPrice = 1;
-
-
-        FruitStruct Pomegranate = new FruitStruct();
-        Pomegranate.ProductID = 732;
-        Pomegranate.ProductName = " Pomegranate";
-        Pomegranate.ProductPrice = 40.3f;
-        Pomegranate.DiscountPrice = 1;
-
-
-        // Database of fruits 
-
-        Dictionary<int,FruitStruct> FruitDatabase = new Dictionary<int,FruitStruct>();
-        FruitDatabase.Add (Kiwi.ProductID, Kiwi);
-        FruitDatabase.Add (Pineapple.ProductID , Pineapple);
-        FruitDatabase.Add ( Avocado.ProductID, Avocado);
-        FruitDatabase.Add (Pomegranate.ProductID, Pomegranate);
-
         // Bill struct 
-
         struct BillStruct
         {
             // constructors
@@ -176,24 +141,69 @@ namespace myapp
             
         }
 
-        // BILL Database 
+        void Billing()
+        {
+            // creating fruits instances 
+            FruitStruct Kiwi = new FruitStruct();
+            Kiwi.ProductID = 192;
+            Kiwi.ProductName = " Kiwi";
+            Kiwi.ProductPrice = 50.2f;
+            Kiwi.DiscountPrice = 1;
 
-        List<BillStruct> BillList = new List<BillStruct>();
+            
+            FruitStruct Pineapple = new FruitStruct();
+            Pineapple.ProductID = 297;
+            Pineapple.ProductName = " Pineapple";
+            Pineapple.ProductPrice = 90.23f;
+            Pineapple.DiscountPrice = 0.9f;
 
-        // Scanning Products
-        int scanneditem = 192;
-        BillList.Add(new BillStruct (FruitDatabase[scanneditem] ,4));
-        scanneditem = 297;
-        BillList.Add(new BillStruct (FruitDatabase[scanneditem] ,2));
-        scanneditem = 645;
-        BillList.Add(new BillStruct (FruitDatabase[scanneditem] ,6));
-        scanneditem = 732;
-        BillList.Add(new BillStruct (FruitDatabase[scanneditem] ,8));
 
-        // Print Bill
+            FruitStruct Avocado = new FruitStruct();
+            Avocado.ProductID = 645;
+            Avocado.ProductName = " Avocado";
+            Avocado.ProductPrice = 80.3f;
+            Avocado.DiscountPrice = 1;
 
-        Console.WriteLine("Item Purchased = "  + BillList.Count);
-        int count = 0;
+
+            FruitStruct Pomegranate = new FruitStruct();
+            Pomegranate.ProductID = 732;
+            Pomegranate.ProductName = " Pomegranate";
+            Pomegranate.ProductPrice = 40.3f;
+            Pomegranate.DiscountPrice = 1;
+
+
+            // Database of fruits 
+            Dictionary<int,FruitStruct> FruitDatabase = new Dictionary<int,FruitStruct>();
+            FruitDatabase.Add(Kiwi.ProductID, Kiwi);
+            FruitDatabase.Add(Pineapple.ProductID , Pineapple);
+            FruitDatabase.Add(Avocado.ProductID, Avocado);
+            FruitDatabase.Add(Pomegranate.ProductID, Pomegranate);
+
+            // BILL Database 
+            List<BillStruct> BillList = new List<BillStruct>();
+            // Scanning Products
+            int scanneditem = 192;
+            BillList.Add(new BillStruct (FruitDatabase[scanneditem],4));
+            scanneditem = 297;
+            BillList.Add(new BillStruct (FruitDatabase[scanneditem],2));
+            scanneditem = 645;
+            BillList.Add(new BillStruct (FruitDatabase[scanneditem],6));
+            scanneditem = 732;
+            BillList.Add(new BillStruct (FruitDatabase[scanneditem],8));
+
+            // Print Bill
+            Console.WriteLine("Item Purchased = "  + BillList.Count);
+            int count = 0;
+            foreach(var BillStruct in BillList )
+            {
+                count++;
+                Console.WriteLine(count +" | "  + BillStruct.Fruit.ProductID + " | " + BillStruct.Fruit.ProductName + " | " + BillStruct.Quantity + " | " + BillStruct.Fruit.ProductPrice + "₹ | " + BillStruct.GetBillprice() + "₹ ");
+
+            }
+
+        }
+
+#endregion
         
     }//end of practise
 
