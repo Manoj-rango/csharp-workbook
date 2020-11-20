@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Narendra\\charp-workbook\\cs projects\\myapp\\myapp.csproj",
+      "projectUniqueName": "C:\\git\\GitHub\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
       "projectName": "myapp",
-      "projectPath": "C:\\Narendra\\charp-workbook\\cs projects\\myapp\\myapp.csproj",
+      "projectPath": "C:\\git\\GitHub\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
       "packagesPath": "C:\\Users\\Unity\\.nuget\\packages\\",
-      "outputPath": "C:\\Narendra\\charp-workbook\\cs projects\\myapp\\obj\\",
+      "outputPath": "C:\\git\\GitHub\\csharp-workbook\\teach\\cs projects\\myapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Unity\\AppData\\Roaming\\NuGet\\NuGet.Config",

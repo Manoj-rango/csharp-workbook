@@ -23,8 +23,9 @@ namespace myapp
         static void Main()
         {
             Console.WriteLine("Entry point");
-            var practice = new Practice();
-            practice.Start();
+
+            var billing = new Billing();
+            billing.Start();
         }
     }
 }
