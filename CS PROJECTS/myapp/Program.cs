@@ -5,13 +5,48 @@ namespace myapp
 {
     class Practice
     {
+        //practise entry point 
         public void Start()
         {
             logging("user0", "password0");
+            GradeCalculator(765);
+            MarketCalculator(2, 120);
+        }
+        /* Market prices for rice
+        above 100kilos. 1kg price = 35.4₹
+        above 1000 kilos. 1kg price = 36.2₹
+        above 10000 kilos. 1 kg price = 36.5₹
+        below 100 kilos. 1kg price = 34₹
+
+        Market prices for chilli
+        above 100kilos. 1kg price = 89.4₹
+        above 1000 kilos. 1kg price = 92.2₹
+        above 10000 kilos. 1 kg price = 93.5₹
+        below 100 kilos. 1kg price = 72₹
+
+
+        Log price based on kilos provided by farmer. Use Minimum 2 functions
+
+        */
+
+        float GetRicePrice(float kilos)
+        {
+            return 0;
+        }
+
+        float GetChilliPrice(float kilos)
+        {
+            return (kilos * 35.4f);
+        }
+
+        void MarketCalculator(float ChilliKilos, float RiceKilos)
+        {
+            Console.WriteLine( (GetRicePrice(RiceKilos) + GetChilliPrice(ChilliKilos)) + " Rupees");
         }
 
 
-        static void GradeCalculator(int score)
+
+        void GradeCalculator(int score)
         {
             float percent = (score/1000f) * 100;
 
@@ -60,7 +95,7 @@ namespace myapp
             }
 
         }
-    }
+    }//end of practise
 
     class Program
     {

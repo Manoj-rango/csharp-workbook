@@ -17,3 +17,10 @@ C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netc
 C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.csproj.CoreCompileInputs.cache
 C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.dll
 C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.pdb
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.exe
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.deps.json
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.runtimeconfig.json
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.runtimeconfig.dev.json
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.dll
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\bin\Debug\netcoreapp3.1\myapp.pdb
+C:\Users\MANOJ\Documents\GitHub\csharp-workbook\CS PROJECTS\myapp\obj\Debug\netcoreapp3.1\myapp.genruntimeconfig.cache
