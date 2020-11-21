@@ -25,10 +25,10 @@ namespace myapp
             Console.WriteLine("Entry point");
 
             var bill = new Billing();
-            bill.Start();
+            bill.GenereteBill();
 
-            var market = new MarketPrices();
-            market.Calculate(20f, 67.4f);
+            // var market = new MarketPrices();
+            // market.Calculate(20f, 67.4f);
 
         }
     }
