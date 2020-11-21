@@ -47,8 +47,8 @@ List<BillStruct> _billList = new List<BillStruct>();
     {
         Console.WriteLine("Billing.Start");
         CreateFruitDatabase();
-        ScanAndCreateBill();
-        PrintBill();
+        // ScanAndCreateBill();
+        // PrintBill();
     }
 
     void CreateFruitDatabase()
