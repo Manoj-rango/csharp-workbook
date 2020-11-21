@@ -43,12 +43,11 @@ Dictionary<int, FruitStruct> _fruitDatabase = new Dictionary<int, FruitStruct>()
 List<BillStruct> _billList = new List<BillStruct>();
 #endregion
 
-    public void Start()
+    public void GenereteBill()
     {
-        Console.WriteLine("Billing.Start");
         CreateFruitDatabase();
-        // ScanAndCreateBill();
-        // PrintBill();
+        ScanProductsAndCreateBill();
+        PrintBill();
     }
 
     void CreateFruitDatabase()
@@ -85,18 +84,41 @@ List<BillStruct> _billList = new List<BillStruct>();
         _fruitDatabase.Add(oranges.ProductId, oranges);
     }
 
-    void ScanAndCreateBill()
+    void ScanProductsAndCreateBill()
     {
         //Scan for products
         //------scanned item #3234-----
         int scanneditem = 3234;
-        _billList.Add(new BillStruct(_fruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
+        if(CheckForProductID(scanneditem))
+        {
+            _billList.Add(new BillStruct(_fruitDatabase[scanneditem],2)); //sending values as a value instead of creating new variable of BillStruct
+        }
+
         //------scanned item #2567-----
         scanneditem = 2567;
-        _billList.Add(new BillStruct(_fruitDatabase[scanneditem],4));
+        if(CheckForProductID(scanneditem))
+        {
+            _billList.Add(new BillStruct(_fruitDatabase[scanneditem],4));
+        }
         //------scanned item #466-----
         scanneditem = 466;
-        _billList.Add(new BillStruct(_fruitDatabase[scanneditem],5));
+        if(CheckForProductID(scanneditem))
+        {
+            _billList.Add(new BillStruct(_fruitDatabase[scanneditem],5));
+        }
+    }
+
+    bool CheckForProductID(int productID)
+    {
+        if(_fruitDatabase.ContainsKey(productID))
+        {
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("Product ID " + productID +  " not detected");
+            return false;
+        }
     }
 
     void PrintBill()
