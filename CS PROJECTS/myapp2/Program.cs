@@ -6,8 +6,10 @@ namespace myapp2
     {
         static void Main()
         {
-            var billing = new Billing();
-            billing.Start();
+            var market = new MarketPrice();
+            market.Graphy();
+            // var billing = new Billing();
+            // billing.Start();
         }
     }
 }
