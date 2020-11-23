@@ -24,11 +24,14 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var bill = new Billing();
-            bill.GenereteBill();
+            // var bill = new Billing();
+            // bill.GenereteBill();
 
             // var market = new MarketPrices();
-            // market.Calculate(20f, 67.4f);
+            // market.Function1();
+
+            var access = new Accesbility();
+            access.Class_Funtion1();
 
         }
     }
