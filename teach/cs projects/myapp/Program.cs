@@ -30,9 +30,11 @@ namespace myapp
             // var market = new MarketPrices();
             // market.Function1();
 
-            var access = new Accesbility();
-            access.Class_Funtion1();
+            // var access = new Accesbility();
+            // access.Class_Funtion1();
 
+            var discount = new DiscountChecker();
+            discount.CalculateDiscount(234.43f, "DIWALI50");
         }
     }
 }
