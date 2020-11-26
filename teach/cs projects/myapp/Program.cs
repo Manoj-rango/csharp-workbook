@@ -34,7 +34,7 @@ namespace myapp
             // access.Class_Funtion1();
 
             var discount = new DiscountChecker();
-            discount.CalculateDiscount(234.43f, "DIWALI50");
+            discount.CalculateDiscount2(234.43f, "sfsf");
         }
     }
 }
