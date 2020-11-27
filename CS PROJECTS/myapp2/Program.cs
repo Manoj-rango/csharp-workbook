@@ -6,10 +6,11 @@ namespace myapp2
     {
         static void Main()
         {
-            var market = new MarketPrice();
-            market.Graphy();
+            var market = new DiscountPriceChecker();
+            market.CalculateDiscount1(100,"DIWALI50");
+
             // var billing = new Billing();
-            // billing.Start();
+            // billing.PrintBill();
         }
     }
 }
