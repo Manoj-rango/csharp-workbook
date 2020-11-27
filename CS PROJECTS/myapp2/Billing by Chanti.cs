@@ -41,21 +41,21 @@ class Billing
 
 #region class varaiables
 Dictionary<int, FruitStruct> _fruitDatabase = new Dictionary<int, FruitStruct>();
-List<BillStruct> _billList = new List<BillStruct>();
+// List<BillStruct> _billList = new List<BillStruct>();
 #endregion
 
-    public  void start();
+    public void Start()
     {
         Console.WriteLine("Billing.Start");
         CreateFruitDatabase();
-        ScanAndCreateBill();
-        PrintBill();
+        // ScanAndCreateBill();
+        // PrintBill();
 
     }
 
-    void CreateFruitDatabase();
+    void CreateFruitDatabase()
     {
-        FruitStruct apples = new FruitStruct();
+        // FruitStruct apples = new FruitStruct();
         
         //create apple instance
         FruitStruct apples = new FruitStruct();
@@ -82,16 +82,11 @@ List<BillStruct> _billList = new List<BillStruct>();
         oranges.ProductPrice = 3.5f;
         oranges.ProductDiscount = 1;
 
-        _fruitdatabase.
+        _fruitDatabase.Add(1, apples);
     }
 
-    
+    void Functon1()
+    {
 
-
-
-
-
-
-
-
+    }
 }
