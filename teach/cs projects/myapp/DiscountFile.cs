@@ -11,6 +11,7 @@ class DiscountChecker
 
     #region class variable
     Dictionary<string, float> _discountDatabase = new Dictionary<string, float>();
+    // float discount = 1;
     #endregion
 
 
@@ -25,14 +26,17 @@ class DiscountChecker
     public void CalculateDiscount1(float price, string code)
     {
         float discount = 1;
-        if(code == "ABCD")
+        if(code == "ABCD")//false
         {
             discount = 1f;
-            
         }
-        else if(code == "DIWALI50")
+        else if(code == "DIWALI50")//true
         {
             discount = 0.5f;
+        }
+        else if(code == "SUMMER20")
+        {
+            discount = 0.8f;
         }
 
         Console.WriteLine($"Discounted price for {price} with {code} is " + price * discount);
@@ -40,6 +44,7 @@ class DiscountChecker
 
     public void CalculateDiscount2(float price, string code)
     {
+        discount = 0.5f;
         CreateDiscountDatabase();
         if(CheckForDiscountCode(code))
         {

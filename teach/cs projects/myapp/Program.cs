@@ -34,7 +34,7 @@ namespace myapp
             // access.Class_Funtion1();
 
             var discount = new DiscountChecker();
-            discount.CalculateDiscount2(234.43f, "sfsf");
+            discount.CalculateDiscount2(234.43f, "SUMMER20");
         }
     }
 }
