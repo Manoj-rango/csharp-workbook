@@ -41,8 +41,12 @@ namespace myapp
             // external.LoadDetails();
 
             var json = new ExternalJSON();
-            // json.WriteToJSON();
-            json.ReadFromJSON();
+            json.WriteToJSON();
+            // json.ReadFromJSON();
+
+            // var json2 = new ExternalJSON2();
+            // json2.WriteToJSON2();
+            // // json.ReadFromJSON();
         }
     }
 }

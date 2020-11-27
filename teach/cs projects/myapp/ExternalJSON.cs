@@ -4,7 +4,6 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
 
-[Serializable()]
 public class WeatherForecastWithPOCOs
 {
     public DateTimeOffset Date { get; set; }
@@ -68,8 +67,9 @@ class ExternalJSON
         weatherForecast.TemperatureCelsius = 25;
         weatherForecast.Summary = "Hot";
         weatherForecast.DatesAvailable = new List<DateTimeOffset>();
-        weatherForecast.DatesAvailable.Add(DateTimeOffset.Now);
-        weatherForecast.DatesAvailable.Add(DateTimeOffset.Now);
+        DateTimeOffset today = new DateTimeOffset(DateTime.Now);
+        weatherForecast.DatesAvailable.Add(today);
+        weatherForecast.DatesAvailable.Add(today.AddDays(2));
 
         HighLowTemps hotTemps = new HighLowTemps();
         hotTemps.High = 60;
