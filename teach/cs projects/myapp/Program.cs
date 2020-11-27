@@ -36,9 +36,13 @@ namespace myapp
             // var discount = new DiscountChecker();
             // discount.CalculateDiscount2(234.43f, "SUMMER20");
 
-            var external = new ExternalFile();
-            // external.WriteDetails();
-            external.LoadDetails();
+            // var external = new ExternalFile();
+            // // external.WriteDetails();
+            // external.LoadDetails();
+
+            var json = new ExternalJSON();
+            // json.WriteToJSON();
+            json.ReadFromJSON();
         }
     }
 }
