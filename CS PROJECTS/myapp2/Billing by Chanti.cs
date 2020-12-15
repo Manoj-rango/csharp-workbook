@@ -87,30 +87,47 @@ Dictionary<int, C_FruitStruct> C_fruitDatabase = new Dictionary<int, C_FruitStru
         C_fruitDatabase.Add(L_watermelons.ProductId,L_watermelons);
 
     }
-    void CheckForCode()
+    bool C_CheckForCode(int P_produceID)
     {
-       
+       if(C_fruitDatabase.ContainsKey(P_produceID))
+        {
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("Product ID " + P_produceID + " is not availabe in the database");
+            return false;
+        }
     }
     
 
     void  C_ScanAndCreateBill()
     {
         int L_scanneditem = 123;
-        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 4));
+        if(C_CheckForCode(L_scanneditem))
+        {
+            C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 4));
+        }
         L_scanneditem = 345;
-        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 2));
-        L_scanneditem = 456;
-        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 6));
+        if(C_CheckForCode(L_scanneditem))
+        {
+            C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 2));
+        }
+        L_scanneditem = 466;
+        if(C_CheckForCode(L_scanneditem))
+        {
+            C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 6));
+        }
     }
 
     public void C_PrintBill()
     {
-        Console.WriteLine(" purchased items " + C_billList.Count);
+        Console.WriteLine("purchased items " + C_billList.Count);
         int count = 0;
         foreach (var billStruct in C_billList)
         {
             count++;
-            Console.WriteLine(count + " " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹" + billStruct.GetBillPrice() +"₹" );
+            Console.WriteLine(count + " " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹ | " + billStruct.GetBillPrice() +"₹" );
         }
     }
 
