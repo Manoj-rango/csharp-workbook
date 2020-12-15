@@ -7,7 +7,7 @@ class Billing
 
 #region struct
     //Declare Fruit Struct
-    struct FruitStruct
+    struct C_FruitStruct
     {
         public int ProductId;
         public string ProductName;
@@ -16,15 +16,15 @@ class Billing
     }
 
     //create Bill struct
-    struct BillStruct
+    struct C_BillStruct
     {
         //constructors
-        public BillStruct(FruitStruct _fruit, int _quantity)
+        public C_BillStruct(C_FruitStruct _fruit, int _quantity)
         {
             Fruit = _fruit;
             Quantity = _quantity;
         }
-        public FruitStruct Fruit;
+        public C_FruitStruct Fruit;
         public int Quantity;
         
         public float GetBillPrice()
@@ -40,53 +40,78 @@ class Billing
 #endregion
 
 #region class varaiables
-Dictionary<int, FruitStruct> _fruitDatabase = new Dictionary<int, FruitStruct>();
-// List<BillStruct> _billList = new List<BillStruct>();
+Dictionary<int, C_FruitStruct> C_fruitDatabase = new Dictionary<int, C_FruitStruct>();
+ List<C_BillStruct> C_billList = new List<C_BillStruct>();
 #endregion
 
-    public void Start()
+    public void C_Bill()
     {
         Console.WriteLine("Billing.Start");
-        CreateFruitDatabase();
-        // ScanAndCreateBill();
-        // PrintBill();
+        C_CreateFruitDatabase();
+        C_ScanAndCreateBill();
+        C_PrintBill();
 
     }
 
-    void CreateFruitDatabase()
+    void C_CreateFruitDatabase()
     {
-        // FruitStruct apples = new FruitStruct();
-        
+            
         //create apple instance
-        FruitStruct apples = new FruitStruct();
-        apples.ProductId = 1456;
-        apples.ProductName = "Apples";
-        apples.ProductPrice = 1.2f;
-        apples.ProductDiscount = 1;
+        C_FruitStruct L_apples = new C_FruitStruct();
+        L_apples.ProductId = 1456;
+        L_apples.ProductName = "Apples";
+        L_apples.ProductPrice = 1.2f;
+        L_apples.ProductDiscount = 1;
         //create mango instance
-        FruitStruct mangos = new FruitStruct();
-        mangos.ProductId = 2567;
-        mangos.ProductName = "mangos";
-        mangos.ProductPrice = 2.2f;
-        mangos.ProductDiscount = 1;
+        C_FruitStruct L_mangos = new C_FruitStruct();
+        L_mangos.ProductId = 2567;
+        L_mangos.ProductName = "mangos";
+        L_mangos.ProductPrice = 2.2f;
+        L_mangos.ProductDiscount = 1;
         //create watermelons instance
-        FruitStruct watermelons = new FruitStruct();
-        watermelons.ProductId = 3234;
-        watermelons.ProductName = "watermelons";
-        watermelons.ProductPrice = 10.5f;
-        watermelons.ProductDiscount = 0.9f;
+        C_FruitStruct L_watermelons = new C_FruitStruct();
+        L_watermelons.ProductId = 3234;
+        L_watermelons.ProductName = "watermelons";
+        L_watermelons.ProductPrice = 10.5f;
+        L_watermelons.ProductDiscount = 0.9f;
         //create oranges instance
-        FruitStruct oranges = new FruitStruct();
-        oranges.ProductId = 466;
-        oranges.ProductName = "oranges";
-        oranges.ProductPrice = 3.5f;
-        oranges.ProductDiscount = 1;
+        C_FruitStruct L_oranges = new C_FruitStruct();
+        L_oranges.ProductId = 466;
+        L_oranges.ProductName = "oranges";
+        L_oranges.ProductPrice = 3.5f;
+        L_oranges.ProductDiscount = 1;
 
-        _fruitDatabase.Add(1, apples);
+        C_fruitDatabase.Add(L_apples.ProductId, L_apples);
+        C_fruitDatabase.Add(L_mangos.ProductId,L_mangos);
+        C_fruitDatabase.Add(L_oranges.ProductId,L_oranges);
+        C_fruitDatabase.Add(L_watermelons.ProductId,L_watermelons);
+
     }
-
-    void Functon1()
+    void CheckForCode()
     {
-
+       
     }
+    
+
+    void  C_ScanAndCreateBill()
+    {
+        int L_scanneditem = 123;
+        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 4));
+        L_scanneditem = 345;
+        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 2));
+        L_scanneditem = 456;
+        C_billList.Add(new C_BillStruct(C_fruitDatabase[L_scanneditem], 6));
+    }
+
+    public void C_PrintBill()
+    {
+        Console.WriteLine(" purchased items " + C_billList.Count);
+        int count = 0;
+        foreach (var billStruct in C_billList)
+        {
+            count++;
+            Console.WriteLine(count + " " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹" + billStruct.GetBillPrice() +"₹" );
+        }
+    }
+
 }
