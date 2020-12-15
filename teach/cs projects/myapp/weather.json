@@ -1,0 +1,24 @@
+{
+  "Date": "2020-11-27T10:38:53.6460776+01:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "DatesAvailable": [
+    "2020-11-27T10:38:53.6503374+01:00",
+    "2020-11-29T10:38:53.6503374+01:00"
+  ],
+  "TemperatureRanges": {
+    "Hot": {
+      "High": 60,
+      "Low": 20
+    },
+    "Cold": {
+      "High": 20,
+      "Low": -10
+    }
+  },
+  "SummaryWords": [
+    "Cool",
+    "Windy",
+    "Humid"
+  ]
+}

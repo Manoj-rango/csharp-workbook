@@ -44,7 +44,6 @@ class DiscountChecker
 
     public void CalculateDiscount2(float price, string code)
     {
-        discount = 0.5f;
         CreateDiscountDatabase();
         if(CheckForDiscountCode(code))
         {

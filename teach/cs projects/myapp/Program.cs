@@ -33,8 +33,20 @@ namespace myapp
             // var access = new Accesbility();
             // access.Class_Funtion1();
 
-            var discount = new DiscountChecker();
-            discount.CalculateDiscount2(234.43f, "SUMMER20");
+            // var discount = new DiscountChecker();
+            // discount.CalculateDiscount2(234.43f, "SUMMER20");
+
+            // var external = new ExternalFile();
+            // // external.WriteDetails();
+            // external.LoadDetails();
+
+            var json = new ExternalJSON();
+            json.WriteToJSON();
+            // json.ReadFromJSON();
+
+            // var json2 = new ExternalJSON2();
+            // json2.WriteToJSON2();
+            // // json.ReadFromJSON();
         }
     }
 }
