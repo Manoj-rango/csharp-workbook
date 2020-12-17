@@ -9,8 +9,8 @@ namespace myapp2
             // var market = new DiscountPriceChecker();
             // market.CalculateDiscount1(100,"DIWALI50");
 
-            var billing = new Billing();
-            billing.C_Bill();
+            var billing = new Billing2();
+            billing.C_billing2();
         }
     }
 }

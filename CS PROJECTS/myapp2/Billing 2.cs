@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
 
 /*
@@ -13,7 +12,7 @@ using System.Collections.Generic;
 
 
 */
-class BillingRewind
+class Billing2
 {
 
 #region structs
@@ -23,7 +22,7 @@ class BillingRewind
     {
         public int ProductId;
 
-        public int ProductName;
+        public string ProductName;
 
         public int ProductPrice;
 
