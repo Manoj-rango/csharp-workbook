@@ -58,9 +58,9 @@ class Billing2
 
 #region  Class Variables
 
-Dictionary<int, C_FruitStruct2> C_fruitdatabase = new Dictionary<int, C_FruitStruct2>();
+    Dictionary<int, C_FruitStruct2> C_fruitdatabase = new Dictionary<int, C_FruitStruct2>();
 
-List<C_BillStruct2> C_billlist2 = new  List<C_BillStruct2>();
+    List<C_BillStruct2> C_billlist2 = new  List<C_BillStruct2>();
 
 #endregion
 
@@ -152,12 +152,5 @@ List<C_BillStruct2> C_billlist2 = new  List<C_BillStruct2>();
             Console.WriteLine(count + " " + billStruct.Fruit.ProductId + " | " + billStruct.Fruit.ProductName + " | " + billStruct.Quantity + " | " + billStruct.Fruit.ProductPrice + "₹ | " + billStruct.GetBillPrice() +"₹");
         }
     }
-
-
-
-
-
-
-
 
 }
