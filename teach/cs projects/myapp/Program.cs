@@ -24,29 +24,21 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            // var bill = new Billing();
-            // bill.GenereteBill();
-
-            // var market = new MarketPrices();
-            // market.Function1();
-
-            // var access = new Accesbility();
-            // access.Class_Funtion1();
-
-            // var discount = new DiscountChecker();
-            // discount.CalculateDiscount2(234.43f, "SUMMER20");
-
-            // var external = new ExternalFile();
-            // // external.WriteDetails();
-            // external.LoadDetails();
-
-            var json = new ExternalJSON();
-            json.WriteToJSON();
+            // var json = new ExternalJSON();
+            // json.WriteToJSON();
             // json.ReadFromJSON();
 
-            // var json2 = new ExternalJSON2();
-            // json2.WriteToJSON2();
-            // // json.ReadFromJSON();
+            //user file
+            var account1 = new Bank("billy", 98745665656);
+            // account1.PrintDetails();
+            long x = account1.AccountNo;
+
+            //account1.AccountNo = 23;
+            Console.WriteLine("Name " + account1.Name);
+
+            //account1.AccountNo = 2453;
+            Console.WriteLine("2 changed no: " + account1.AccountNo);
+
         }
     }
 }
