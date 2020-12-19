@@ -9,7 +9,7 @@ class Bank
 
     private long _Mobileno;
 
-    public long _Accountno;
+    private long _Accountno;
 
     #region Properties
     public long Accountno
@@ -23,6 +23,18 @@ class Bank
     {
         get{
             return(_Name);
+        }
+
+        //set(string value)
+        set{
+            if(value.Length >3)
+            {
+                
+                _Name = value;
+            }
+            else{
+                Console.WriteLine("name lenght should be more than 3 alphabets");
+            }
         }
     }
 
