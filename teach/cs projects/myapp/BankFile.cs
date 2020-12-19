@@ -19,7 +19,7 @@ class Bank
             return _accountNo;
         }
 
-        // //setter
+        // //setter (string value)
         // set{
         //     Console.WriteLine("be careful with setting new value");
         //     if(value <= 1000)
