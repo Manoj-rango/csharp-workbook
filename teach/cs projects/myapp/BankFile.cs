@@ -5,7 +5,7 @@ using System.Collections.Generic;
 class Bank
 {
     
-    #region class_varibles
+    #region class_fields
     private string _name;
     private long _mobileNo;
 

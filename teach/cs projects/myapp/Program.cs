@@ -35,7 +35,7 @@ namespace myapp
 
 
             wea.WindSpeed = 23;
-            wea.WindForce = 343;
+            // wea.WindForce = 343;
         }
     }
 }
