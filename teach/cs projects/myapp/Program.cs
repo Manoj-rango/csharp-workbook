@@ -34,7 +34,8 @@ namespace myapp
             Console.WriteLine("WindSpeed: " + wea.WindSpeed);
 
 
-            wea.WindSpeed = 23;
+            wea.WindSpeed = float.Parse(Console.ReadLine());
+            Console.WriteLine("windspeed: " + wea.WindSpeed);
             // wea.WindForce = 343;
         }
     }
