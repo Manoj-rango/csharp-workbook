@@ -16,6 +16,10 @@ class Weather
         //sets value
         set
         {
+            if(value < 0)
+            {
+                Console.WriteLine("IT MIGHT SNOW!!!");
+            }
             _temperature = value;
         }
     }

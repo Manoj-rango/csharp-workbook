@@ -23,12 +23,19 @@ namespace myapp
         static void Main()
         {
             Console.WriteLine("Entry point");
+            // var bill = new Billing2();
+            // bill.GenereteBill();
 
+            var b1 = new Bank("hades", 878454845);
+            Console.WriteLine("Account no(Encrypt): " + b1.AccountNo);
+            b1.PrintDetails();
+
+#region old_stuff
             // var json = new ExternalJSON();
             // json.WriteToJSON();
             // json.ReadFromJSON();
 
-            //user file
+            /*//user file
             var wea = new Weather();
             Console.WriteLine("Temperature: " + wea.Temperature);
             Console.WriteLine("WindSpeed: " + wea.WindSpeed);
@@ -36,7 +43,8 @@ namespace myapp
 
             wea.WindSpeed = float.Parse(Console.ReadLine());
             Console.WriteLine("windspeed: " + wea.WindSpeed);
-            // wea.WindForce = 343;
+            // wea.WindForce = 343;*/
+#endregion
         }
     }
 }

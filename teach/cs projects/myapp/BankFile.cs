@@ -15,17 +15,29 @@ class Bank
     public long AccountNo
     {
         //getter
-        get{
-            return _accountNo;
+        get
+        {
+            return Encrypt(_accountNo);
         }
 
         // //setter (string value)
         // set{
         //     Console.WriteLine("be careful with setting new value");
         //     if(value <= 1000)
-        //         _accountNo = value;
+        //         _accountNo = Decrypt(value);
         // }
     }
+
+    public long Encrypt(long value)
+    {
+        return (value + 20);
+    }
+
+    public long Decrypt(long value)
+    {
+        return(value - 20);
+    }
+
     public int BranchCode
     {
         get{return 7126;}
@@ -49,7 +61,7 @@ class Bank
 
     public void PrintDetails()
     {
-        Console.WriteLine("Name " + _name + "\nMobile No: " + _mobileNo);
+        Console.WriteLine("Name: " + _name + "\nMobile No: " + _mobileNo+ "\nAccount No(Internal): " + _accountNo);
     }
 
     
