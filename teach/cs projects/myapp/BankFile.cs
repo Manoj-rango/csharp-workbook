@@ -59,6 +59,17 @@ class Bank
         _accountNo = 50171264789;
     }
 
+    public Bank()
+    {
+        Console.WriteLine("Please enter your name: ");
+        _name = Console.ReadLine();
+        Console.WriteLine("Enter your Mobile no: ");
+        _mobileNo = long.Parse(Console.ReadLine());
+
+        //generate random number;
+        _accountNo =  50171264789;
+    }
+
     public void PrintDetails()
     {
         Console.WriteLine("Name: " + _name + "\nMobile No: " + _mobileNo+ "\nAccount No(Internal): " + _accountNo);
