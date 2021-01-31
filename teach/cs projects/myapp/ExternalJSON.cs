@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
+/*
+"POCO" stands for plain old CLR object. 
+A POCO is a .NET type that doesn't depend on any framework-specific types, 
+for example, through inheritance or attributes.
 
+link ref: https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to?pivots=dotnet-core-3-1
+*/
 public class WeatherForecastWithPOCOs
 {
     public DateTimeOffset Date { get; set; }
