@@ -12,14 +12,14 @@ namespace  myapp
             //   var BIll = new Billing();
             //   BIll.Start();
 
-               var User1 = new Bank();
-               Console.WriteLine("Account no(Encrypt): " + User1.Accountno);
-               User1.PrintDetails();
+            //    var User1 = new Bank();
+            //    Console.WriteLine("Account no(Encrypt): " + User1.Accountno);
+            //    User1.PrintDetails();
 
-//             var public = new College();
-// `           Console.WriteLine("students: " + public.students);
-//             Console.WriteLine("staffmembers: " + public.staffmembers);
-//             public.PublicSurvey();
+            var student1 = new College();
+           Console.WriteLine("students: " + student1.Students);
+            Console.WriteLine("staffmembers: " + student1.staffmembers);
+            student1.PublicSurvey();
         }
 
        

@@ -6,14 +6,14 @@ class  College
 {
 
 
-    private int _Students;
+    private int _students;
 
 
     public int Students
     {
         get
         {
-            return _Students;
+            return _students;
         }
 
         set
@@ -22,7 +22,7 @@ class  College
             {
                 Console.WriteLine("Can be considered as University");
             }
-            _Students=value;
+            _students=value;
         }
     }
 
