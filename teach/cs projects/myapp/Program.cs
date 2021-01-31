@@ -23,23 +23,17 @@ namespace myapp
         static void Main()
         {
             Console.WriteLine("Entry point");
-            // var bill = new Billing2();
-            // bill.GenereteBill();
 
-            // var b1 = new Bank();
-            // Console.WriteLine("Account no(Encrypt): " + b1.AccountNo);
-            // b1.PrintDetails();
+            // var file1 = new SimpleFile();
+            // file1.Start();           
 
-#region old_stuff
-            // var json = new ExternalJSON();
-            // json.WriteToJSON();
-            // json.ReadFromJSON();
-            
-            var wea = new Weather();
-            Console.WriteLine("Temperature: " + wea.Temperature);
-            Console.WriteLine("WindSpeed: " + wea.WindSpeed);
-            wea.TakeUserInput();
-#endregion
+            // var en1 = new MainClass();
+            // en1.Start();
+
+            var json1 = new ExternalJSON();
+            json1.WriteToJSON();
+            json1.ReadFromJSON();
+
         }
     }
 }

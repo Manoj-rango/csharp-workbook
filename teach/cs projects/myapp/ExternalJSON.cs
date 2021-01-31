@@ -25,7 +25,8 @@ class ExternalJSON
 {
     WeatherForecastWithPOCOs weatherForecast = new WeatherForecastWithPOCOs();
     string fileName = "weather.json";
-    public void WriteToJSON()
+
+    public void WriteToJSON(bool encrypt = false)
     {
         Console.WriteLine("WRITING...");
         FillData();
@@ -35,14 +36,18 @@ class ExternalJSON
         };
 
         var jsonString = JsonSerializer.Serialize<WeatherForecastWithPOCOs>(weatherForecast,options);
+        //encrypt
+        if(encrypt) jsonString = Encrypter.Encrypt(jsonString);
 
         File.WriteAllText(fileName, jsonString);
     }
 
-    public void ReadFromJSON()
+    public void ReadFromJSON(bool decrypt = false)
     {
         Console.WriteLine("READING.....");
         var jsonString = File.ReadAllText(fileName);
+        //decypt
+        if(decrypt) jsonString = Encrypter.Decrypt(jsonString);
         var forecastDE = JsonSerializer.Deserialize<WeatherForecastWithPOCOs>(jsonString);
 
         Console.WriteLine("TemperatureCelsius: "+ forecastDE.TemperatureCelsius);
