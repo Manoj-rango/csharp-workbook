@@ -16,10 +16,17 @@ namespace  myapp
             //    Console.WriteLine("Account no(Encrypt): " + User1.Accountno);
             //    User1.PrintDetails();
 
-            var student1 = new College();
-           Console.WriteLine("students: " + student1.Students);
-            Console.WriteLine("staffmembers: " + student1.staffmembers);
-            student1.PublicSurvey();
+            //   var student1 = new College();
+            //   Console.WriteLine("students: " + student1.Students);
+            //   Console.WriteLine("staffmembers: " + student1.staffmembers);
+            //    student1.PublicSurvey();
+
+            // var farmer = new MarketPrice(12.2f,13.3f);
+            // farmer.MarketCalculator();
+
+            
+           
+
         }
 
        

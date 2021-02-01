@@ -24,7 +24,8 @@ class Bank
     {
         return (value + 123);
     }
-    public long Decrypt(long value)
+    public long 
+    Decrypt(long value)
     {
         return (value - 123);
     }
