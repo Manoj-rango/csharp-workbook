@@ -23,74 +23,63 @@ class MarketPrice
 {
     #region Class Variables
 
-    private float _GetRicePrice;
+    private float _riceKilos;
 
-    private float _GetChilliPrice;
+    private float _chilliKilos;
 
     #region Properties
 
-    public float RiceKilos
+    public float RicePrice
     {
         get
         {
-            return _GetRicePrice;
+            float price = 0;
+            if(_riceKilos < 100)
+            {
+                price = (_riceKilos * 34f);
+            }
+            else if (_riceKilos >= 100 && _riceKilos < 1000)
+            {
+                price = (_riceKilos * 35.4f);
+            }
+            else if (_riceKilos >= 1000 && _riceKilos < 10000)
+            {
+                price = (_riceKilos * 36.2f);
+            }
+            else if (_riceKilos >= 10000)
+            {
+                price = (_riceKilos * 36.5f);
+            }
+
+            return price;
         }
 
-        set
-        {
-                // _GetRicePrice=value;
-                
-                float price = 0;
-            if(RiceKilos < 100)
-            {
-                price = (RiceKilos * 34f);
-            }
-            else if (RiceKilos >= 100 && RiceKilos < 1000)
-            {
-                price = (RiceKilos * 35.4f);
-            }
-            else if (RiceKilos >= 1000 && RiceKilos < 10000)
-            {
-                price = (RiceKilos * 36.2f);
-            }
-            else if (RiceKilos >= 10000)
-            {
-                price = (RiceKilos * 36.5f);
-            }
-        
-        }
     }
-    public float ChilliKilos
+    public float ChilliPrice
     {
         get
         {
-            return _GetChilliPrice;
+            float price = 0;
+            if(_chilliKilos < 100)
+            {
+                price = (_chilliKilos * 72);
+            }
+            else if (_chilliKilos >= 100 && _chilliKilos < 1000)
+            {
+                price = (_chilliKilos * 89.4f);
+            }
+            else if (_chilliKilos >= 1000 && _chilliKilos < 10000)
+            {
+                price = (_chilliKilos * 92.2f);
+            }
+            else if (ChilliPrice >= 10000)
+            {
+                price = (_chilliKilos * 93.5f);
+            }
+
+            return price;
         }
 
-        set
-        {
-            // _GetChilliPrice=value;
-
-                float price = 0;
-            if(ChilliKilos < 100)
-            {
-                price = (ChilliKilos * 72);
-            }
-            else if (ChilliKilos >= 100 && ChilliKilos < 1000)
-            {
-                price = (ChilliKilos * 89.4f);
-            }
-            else if (ChilliKilos >= 1000 && ChilliKilos < 10000)
-            {
-                price = (ChilliKilos * 92.2f);
-            }
-            else if (ChilliKilos >= 10000)
-            {
-                price = (ChilliKilos * 93.5f);
-            }
-            
-        
-        }
     }
     #endregion //ClassVariables
     #endregion //Properties
@@ -98,21 +87,23 @@ class MarketPrice
 
    public MarketPrice(float ricekilos,float chillikilos)
    {
-       _GetRicePrice=ricekilos;
-       _GetChilliPrice=chillikilos;
+       //get data from constructor
+       _riceKilos = ricekilos;
+       _chilliKilos = chillikilos;
    }
 
     // public MarketPrice()
     // {
-    //     Console.WriteLine("Please enter RiceKilos");
-    //     RiceKilos=float.Parse(Console.ReadLine());
-    //     Console.Write("Please enter ChilliKilos");
-    //     ChilliKilos=float.Parse(Console.ReadLine());
+    //     Console.WriteLine("Please enter RicePrice");
+    //     RicePrice=float.Parse(Console.ReadLine());
+    //     Console.Write("Please enter ChilliPrice");
+    //     ChilliPrice=float.Parse(Console.ReadLine());
     // }
     
    public void MarketCalculator()
    {
-       Console.WriteLine("\nRicePrice : " + _GetRicePrice + "\nChilliPrice :" + _GetChilliPrice + "₹");
+       //print prices
+       Console.WriteLine("\nRicePrice : " + RicePrice + "₹\nChilliPrice :" + ChilliPrice + "₹");
    }
 
 }

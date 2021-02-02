@@ -21,12 +21,9 @@ namespace  myapp
             //   Console.WriteLine("staffmembers: " + student1.staffmembers);
             //    student1.PublicSurvey();
 
-            // var farmer = new MarketPrice(12.2f,13.3f);
-            // farmer.MarketCalculator();
-
-            
-           
-
+            var farmer = new MarketPrice(12.2f,13.3f);
+            // farmer.RicePrice
+            farmer.MarketCalculator();
         }
 
        
