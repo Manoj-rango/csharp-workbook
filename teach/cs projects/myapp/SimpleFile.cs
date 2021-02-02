@@ -7,17 +7,26 @@ class SimpleFile
     {
         string path = "SimpleFile.txt";
 
-        // Create a file to write to.
+        // NEW FILE CREATE: Create a file to write to.
         string createText = "Hello and Welcome" + Environment.NewLine;
         File.WriteAllText(path, createText);
 
+        // EXISTING FILE/NEW FILE: Update text
         // This text is always added, making the file longer over time
-        // if it is not deleted.
+        // if it is not deleted.        
         string appendText = "This is extra text" + Environment.NewLine;
         File.AppendAllText(path, appendText);
-
+        
+        // EXISTING FILE ONLY: Read data
         // Open the file to read from.
-        string readText = File.ReadAllText(path);
-        Console.WriteLine(readText);
+        if(File.Exists(path))
+        {
+            string readText = File.ReadAllText(path);
+            Console.WriteLine(readText);
+        }
+        else
+        {
+            Console.WriteLine("path is not available");
+        }
     }
 }
