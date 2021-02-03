@@ -92,14 +92,7 @@ class MarketPrice
        _chilliKilos = chillikilos;
    }
 
-    // public MarketPrice()
-    // {
-    //     Console.WriteLine("Please enter RicePrice");
-    //     RicePrice=float.Parse(Console.ReadLine());
-    //     Console.Write("Please enter ChilliPrice");
-    //     ChilliPrice=float.Parse(Console.ReadLine());
-    // }
-    
+  
    public void MarketCalculator()
    {
        //print prices
