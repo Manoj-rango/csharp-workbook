@@ -24,8 +24,11 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var file1 = new SimpleFile();
-            file1.Start();
+            // var file1 = new SimpleFile();
+            // file1.Start();
+
+            string input = Console.ReadLine();
+            Console.WriteLine("I typed : " + input);
         }
     }
 }
