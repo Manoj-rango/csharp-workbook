@@ -5,6 +5,7 @@ class SimpleFile
 {
     public void Start()
     {
+        //give path to save file. If you give only file name, it'll save in the same directory
         string path = "SimpleFile.txt";
 
         // NEW FILE CREATE: Create a file to write to.

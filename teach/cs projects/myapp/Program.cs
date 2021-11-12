@@ -24,11 +24,12 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            // var file1 = new SimpleFile();
-            // file1.Start();
+            var file1 = new SimpleJSON();
+            file1.WriteToJSON();
+ 
 
-            string input = Console.ReadLine();
-            Console.WriteLine("I typed : " + input);
+            // string input = Console.ReadLine();
+            // Console.WriteLine("I typed : " + input);
         }
     }
 }
