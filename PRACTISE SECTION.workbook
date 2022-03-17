@@ -186,7 +186,6 @@ Console.WriteLine("total prices = " + totalprices);
 6. cross check all products through given BILL 
 
 NECESSARY things
-
 product 
 product code 
 product price
