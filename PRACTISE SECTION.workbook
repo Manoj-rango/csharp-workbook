@@ -5,7 +5,7 @@ title: PRACTISE section
 platforms:
 - Console
 ---
-
+ 
 ```csharp
       string [] userserver = new string[]{"user0", "user1", "user2"};
 string [] passwordserver = new string[] {"password0", "password1", "password2"};
