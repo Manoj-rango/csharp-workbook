@@ -10,6 +10,13 @@ public class PUBG_DATA
     public int Coins {get; set;}
 }
 
+public class data
+{
+    public string Username;
+    public int Level;
+    public int Coins;
+}
+
 class SimpleJSON
 {
     PUBG_DATA player = new PUBG_DATA();
