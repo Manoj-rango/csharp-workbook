@@ -24,16 +24,12 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var test = new TestProperties();
-            // //fields can be used left and right side
-            // test.AccountIdEdit = 20;
-            // var id = test.AccountIdEdit;
-            
-            //properties can be used left or right side based on access given
-            var id2 = test.AccountId;
-            // test.Address = "kmm";
+            var file1 = new SimpleJSON();
+            file1.WriteToJSON();
+            file1.ReadFromJSON();
 
-            // var id3 = test.AccountIdFunc(false);
+            // var file2 = new SimpleJSON_Fields();
+            // file2.WriteToJSON();
             
         }
     }

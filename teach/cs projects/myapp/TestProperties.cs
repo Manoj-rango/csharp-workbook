@@ -2,6 +2,19 @@ using System;
 
 class TestProperties
 {
+    void CodeForMain()//don't call this funtion
+    {
+        var test = new TestProperties();
+        // //fields can be used left and right side
+        test.AccountIdEdit = 20;
+        var id = test.AccountIdEdit;
+        
+        //properties can be used left or right side based on access given
+        var id2 = test.AccountId;
+        // test.Address = "kmm";
+    }
+
+
     //public field. Instances will have FULL access
     //fields can only be edited. No pre-processing can be done
     public int AccountIdEdit;
