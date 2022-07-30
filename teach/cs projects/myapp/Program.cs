@@ -24,8 +24,9 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var file1 = new SimpleJSON();
+            var file1 = new ExternalJSON();
             file1.WriteToJSON();
+
             file1.ReadFromJSON();
 
             // var file2 = new SimpleJSON_Fields();
