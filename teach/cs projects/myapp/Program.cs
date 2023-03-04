@@ -24,8 +24,8 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var db = new DatabaseTest();
-            db.Start();
+            var habit = new HabitTracker();
+            habit.Start();
         }
     }
 }
