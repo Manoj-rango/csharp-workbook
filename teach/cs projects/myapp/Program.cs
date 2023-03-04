@@ -24,12 +24,8 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var file1 = new SimpleJSON();
-            file1.WriteToJSON();
- 
-
-            // string input = Console.ReadLine();
-            // Console.WriteLine("I typed : " + input);
+            var db = new DatabaseTest();
+            db.Start();
         }
     }
 }
