@@ -24,14 +24,8 @@ namespace myapp
         {
             Console.WriteLine("Entry point");
 
-            var file1 = new ExternalJSON();
-            file1.WriteToJSON();
-
-            file1.ReadFromJSON();
-
-            // var file2 = new SimpleJSON_Fields();
-            // file2.WriteToJSON();
-            
+            var db = new DatabaseTest();
+            db.Start();
         }
     }
 }

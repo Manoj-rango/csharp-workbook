@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "tNNfFm0HAZAs5A7s4rOuqfY5mSBag8xtI18zxkYI8PPCpIny+cVwUBnz2BM+5kmuz+/MZ5tTNMPzbMLtalmPsQ==",
+  "dgSpecHash": "2FhDAvfrOFqr0wmB9AmsO23DtBZYr7wCW7HXDhFdVRqWPry9CDvIvmxD3SHznhTJPUmsNbuJOjDhiCCgNM3wZg==",
   "success": true,
   "projectFilePath": "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.data.sqlite\\5.0.17\\microsoft.data.sqlite.5.0.17.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.17\\microsoft.data.sqlite.core.5.0.17.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
