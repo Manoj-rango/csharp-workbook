@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.Data.Sqlite;
 
+//Youtube tutorial: https://www.youtube.com/watch?v=d1JIJdDVFjs
+
 class HabitTracker
 {
     private string _connectionString = @"Data Source=habit-Tracker.sqlite";
