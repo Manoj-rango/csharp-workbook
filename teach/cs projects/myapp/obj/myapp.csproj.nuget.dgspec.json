@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj": {}
+    "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/myapp.csproj": {}
   },
   "projects": {
-    "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj": {
+    "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/myapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
+        "projectUniqueName": "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/myapp.csproj",
         "projectName": "myapp",
-        "projectPath": "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
-        "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-        "outputPath": "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\obj\\",
+        "projectPath": "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/myapp.csproj",
+        "packagesPath": "/Users/narendra-mac/.nuget/packages/",
+        "outputPath": "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/narendra-mac/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,12 +35,12 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.Data.Sqlite": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -54,18 +54,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

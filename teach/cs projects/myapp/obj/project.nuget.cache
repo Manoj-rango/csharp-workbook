@@ -1,17 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "2FhDAvfrOFqr0wmB9AmsO23DtBZYr7wCW7HXDhFdVRqWPry9CDvIvmxD3SHznhTJPUmsNbuJOjDhiCCgNM3wZg==",
+  "dgSpecHash": "uQJ1JukJp0LavZ8Q+i3NDp4MTd59CAUCDX/6Oy13AD1i99IAXiE7WYqK6eV72zxsYBLmHyf+ruGSU8U5G27rvw==",
   "success": true,
-  "projectFilePath": "C:\\work\\git\\csharp-workbook\\teach\\cs projects\\myapp\\myapp.csproj",
+  "projectFilePath": "/Users/narendra-mac/work/git/csharp-workbook/teach/cs projects/myapp/myapp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.data.sqlite\\5.0.17\\microsoft.data.sqlite.5.0.17.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.17\\microsoft.data.sqlite.core.5.0.17.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "/Users/narendra-mac/.nuget/packages/microsoft.data.sqlite/7.0.4/microsoft.data.sqlite.7.0.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/microsoft.data.sqlite.core/7.0.4/microsoft.data.sqlite.core.7.0.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
+    "/Users/narendra-mac/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }
