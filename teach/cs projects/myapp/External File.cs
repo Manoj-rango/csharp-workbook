@@ -1,3 +1,4 @@
+#if !NET7_0
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -79,3 +80,4 @@ public class ExternalFile
         return null; // file not exists
     }
 }
+#endif
